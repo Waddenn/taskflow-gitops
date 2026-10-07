@@ -9,6 +9,8 @@ KIND_VERSION="v0.33.0"
 ARGOCD_VERSION="v3.5.3"
 ROLLOUTS_VERSION="v1.10.0"
 CLUSTER="cicd"
+KUBECTL_VERSION="v1.37.0"
+NODE_IMAGE="kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5"
 IMAGE_REPO="ghcr.io/9m7fjfpv9k-cyber/taskflow"
 LAB_IMAGES="${IMAGE_REPO}:1.0.0 ${IMAGE_REPO}:1.1.0 ${IMAGE_REPO}:2.0.0 ${IMAGE_REPO}:2.1.0 curlimages/curl:8.12.1 grafana/k6:latest"
 
@@ -31,8 +33,8 @@ step "Vérification de Docker"
 docker info >/dev/null 2>&1 || fail "Docker ne répond pas. Démarrez Docker Desktop, puis relancez le script."
 
 step "Outils en ligne de commande (dans ${BIN_DIR})"
-if ! command -v kubectl >/dev/null 2>&1; then
-  K8S_STABLE="$(curl -fsSL https://dl.k8s.io/release/stable.txt)"
+if ! kubectl version --client -o json 2>/dev/null | grep -q "${KUBECTL_VERSION}"; then
+  K8S_STABLE="${KUBECTL_VERSION}"
   curl -fsSLo "${BIN_DIR}/kubectl" "https://dl.k8s.io/release/${K8S_STABLE}/bin/${OS}/${ARCH}/kubectl"
   chmod +x "${BIN_DIR}/kubectl"
 fi
@@ -52,7 +54,7 @@ step "Cluster kind « ${CLUSTER} »"
 if kind get clusters 2>/dev/null | grep -qx "${CLUSTER}"; then
   echo "Le cluster existe déjà, on le réutilise."
 else
-  kind create cluster --name "${CLUSTER}" --wait 180s
+  kind create cluster --name "${CLUSTER}" --image "${NODE_IMAGE}" --wait 180s
 fi
 kubectl config use-context "kind-${CLUSTER}" >/dev/null
 

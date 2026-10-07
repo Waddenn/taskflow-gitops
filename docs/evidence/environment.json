@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-07",
+  "upstream": "https://github.com/9m7fjfpv9k-cyber/taskflow-gitops",
+  "upstream_sha": "59403cb7768e3c65b78764bce7768faadbd9c9a7",
+  "cluster": "kind-cicd",
+  "kind": "v0.33.0",
+  "kubernetes": "v1.37.0",
+  "kubectl": "v1.37.0",
+  "argocd": "v3.5.3",
+  "argo-rollouts": "v1.10.0",
+  "observer_image": "curlimages/curl:8.12.1",
+  "method": "Argo CD auto-sync, sans annotation de refresh manuel; \u00e9chantillons via Service depuis un pod",
+  "context_before": "k3d-classlab"
+}

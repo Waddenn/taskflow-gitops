@@ -1,0 +1,41 @@
+
+==> Vérification de Docker
+
+==> Outils en ligne de commande (dans /var/home/tom/.local/bin)
+kubectl : Client Version: v1.37.0
+kind    : kind v0.33.0 go1.26.7 linux/amd64
+
+==> Cluster kind « cicd »
+Le cluster existe déjà, on le réutilise.
+
+==> Argo CD v3.5.3
+
+==> Argo Rollouts v1.10.0
+
+==> Attente du démarrage (quelques minutes la première fois)
+deployment "argocd-server" successfully rolled out
+deployment "argocd-repo-server" successfully rolled out
+Waiting for partitioned roll out to finish: 0 out of 1 new pods have been updated...
+Waiting for 1 pods to be ready...
+Waiting for 1 pods to be ready...
+Waiting for 1 pods to be ready...
+partitioned roll out complete: 1 new pods have been updated...
+deployment "argo-rollouts" successfully rolled out
+
+==> Téléchargement des images des labs dans le cluster (évite de saturer le Wi-Fi demain)
+  ok      ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0
+  ok      ghcr.io/9m7fjfpv9k-cyber/taskflow:1.1.0
+  ok      ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0
+  ok      ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0
+  ok      curlimages/curl:8.12.1
+  ok      grafana/k6:latest
+
+==> Installation terminée
+  Cluster      : kind-cicd
+  Argo CD      : ./scripts/argocd-ui.sh, puis https://localhost:8080
+                 utilisateur admin (mot de passe affiché par argocd-ui.sh)
+  Rollouts     : kubectl argo rollouts version
+
+  Si une commande est introuvable dans un nouveau terminal, ajoutez cette ligne
+  à votre ~/.zshrc ou ~/.bashrc :
+    export PATH="$HOME/.local/bin:$PATH"
