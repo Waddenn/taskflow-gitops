@@ -37,5 +37,5 @@ Il peut être relancé sans risque.
 
 ## Équipe
 
-- Nicolas Roulois ([@Niccoco78](https://github.com/Niccoco78))
-- [@Waddenn](https://github.com/Waddenn)
+- Tom PATELAS ([@Waddenn](https://github.com/Waddenn))
+- Nicolas ROULOIS ([@Niccoco78](https://github.com/Niccoco78))
