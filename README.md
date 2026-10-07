@@ -37,5 +37,5 @@ Il peut être relancé sans risque.
 
 ## Équipe
 
-<!-- Noms du binôme -->
-- À compléter
+- Tom PATELAS ([@Waddenn](https://github.com/Waddenn))
+- Nicolas ROULOIS ([@Niccoco78](https://github.com/Niccoco78))
