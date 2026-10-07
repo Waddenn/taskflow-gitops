@@ -7,7 +7,13 @@ TP CI/CD M2 — Sup de Vinci, cours de Hardy Milalu Ngoma, 7 octobre 2026.
 **Équipe :** [Tom PATELAS](https://github.com/Waddenn) et [Nicolas ROULOIS](https://github.com/Niccoco78).
 Dépôt basé sur [celui de l’intervenant](https://github.com/9m7fjfpv9k-cyber/taskflow-gitops).
 
-**À la fin du lab : TaskFlow 2.0.0, quatre pods prêts, Argo CD Synced / Healthy.**
+**Objectif : déployer depuis Git, tester une release progressivement et revenir en arrière en cas de bug.**
+
+| GitOps | Blue-Green | Retour après incident |
+|---|---|---|
+| Release déployée en **61 s** | **4 + 4 pods** : production et preview | **200/200 réponses HTTP 200** après revert |
+
+**État final du lab : TaskFlow 2.0.0, quatre pods prêts, Synced / Healthy** — configuration conforme à Git et application considérée saine par Argo CD.
 
 ## Fonctionnement
 
@@ -17,40 +23,13 @@ flowchart LR
     PR --> CI[CI : validation]
     CI --> Git[main : état souhaité]
     Git -->|pull périodique| Argo[Argo CD]
-    Argo -->|sync / prune / selfHeal| K8s[Cluster kind-cicd]
-    K8s --> Rollout[Argo Rollouts]
-    Rollout --> Service[Service taskflow]
-    Service --> Pods[Pods TaskFlow]
-    K8s -. état observé .-> Argo
+    Argo -->|synchronise| Rollout[Argo Rollouts dans kind-cicd]
+    Rollout -->|bascule ou paliers| Pods[Pods TaskFlow]
 ```
 
 La CI vérifie les manifests. Argo CD lit `main`, déploie les changements et corrige
 les dérives. Les modifications passent par PR, avec un check obligatoire sur `main`.
 Le seuil d’approbation est à 0 pour cette réalisation.
-
-## Lancer le projet
-
-Prérequis : Docker démarré, Bash, Git, 8 Go de RAM et 10 Go libres. Sous Windows, utiliser WSL2.
-
-```bash
-git clone https://github.com/Waddenn/taskflow-gitops.git
-cd taskflow-gitops
-mkdir -p .local
-export KUBECONFIG="$PWD/.local/kubeconfig"
-export PATH="$PWD/.local/bin:$HOME/.local/bin:$PATH"
-./scripts/install.sh
-source scripts/check-context.sh
-kubectl apply -f argocd/application.yaml
-kubectl -n argocd get application taskflow
-./scripts/observe.sh taskflow 100
-```
-
-Reprendre les deux `export` dans chaque nouveau terminal. Le contexte du lab doit être `kind-cicd`.
-La branche `main` contient l’état final ; voir le [guide pour rejouer les exercices](docs/REPLAY.md).
-
-- Interface Argo CD : `./scripts/argocd-ui.sh`
-- Suivi : `kubectl argo rollouts get rollout taskflow -n taskflow --watch`
-- Dashboard : `kubectl argo rollouts dashboard -n taskflow`
 
 ## Journal du lab
 
@@ -79,14 +58,16 @@ Après la bascule, les anciens pods sont réduits avec un délai configuré de 3
 
 ![Blue-Green : quatre pods en preview et quatre en production](docs/images/bluegreen-replicas.jpg)
 
+*Les deux versions coexistent : la preview permet de tester avant de basculer la production.*
+
 ### Canary
 
 Une promotion manuelle débloque le palier 25 %, puis les pauses de 60 s à 50 % et de
 30 s à 75 % s’enchaînent. Sans routeur de trafic, les pourcentages de requêtes restent approximatifs.
 
-![Canary en pause à 25 %](docs/images/canary-paused.jpg)
-
 ![Répartition mesurée à chaque palier](docs/images/canary-traffic.png)
+
+*Sur 100 requêtes par palier, la nouvelle version reçoit 29, 55, 80 puis 100 réponses : la progression est visible, sans routage au pourcentage exact.*
 
 ### Incident et retour arrière
 
@@ -95,7 +76,20 @@ Après `abort`, les requêtes repassent sur 2.0.0. Git demande encore 2.1.0 : la
 
 ![Erreurs mesurées avant et après le retour arrière](docs/images/incident-http.png)
 
+*Le bug affecte la route métier, pas `/health`. L’abort rétablit le trafic ; le revert rétablit aussi la version déclarée dans Git.*
+
+<details>
+<summary>Captures complémentaires : Canary en pause et après abort</summary>
+
+![Canary en pause à 25 %](docs/images/canary-paused.jpg)
+
+*Un pod sur quatre porte la nouvelle version avant la promotion manuelle.*
+
 ![Après abort : aucun pod 2.1.0, quatre pods 2.0.0](docs/images/canary-aborted.jpg)
+
+*Après abort, les quatre pods stables servent le trafic, mais la version demandée reste 2.1.0 jusqu’au revert.*
+
+</details>
 
 ## Réponses aux questions
 
@@ -119,6 +113,33 @@ Il faut aussi surveiller les erreurs et les latences réellement rencontrées pa
 le défaut. Blue-Green facilite une bascule rapide, mais nécessite ici huit pods pendant la transition
 et expose tout le trafic après promotion. Pour TaskFlow, nous retenons Canary avec contrôle des erreurs avant promotion.
 
+<details>
+<summary><strong>Reproduire le lab et lancer les contrôles</strong></summary>
+
+## Lancer le projet
+
+Prérequis : Docker démarré, Bash, Git, 8 Go de RAM et 10 Go libres. Sous Windows, utiliser WSL2.
+
+```bash
+git clone https://github.com/Waddenn/taskflow-gitops.git
+cd taskflow-gitops
+mkdir -p .local
+export KUBECONFIG="$PWD/.local/kubeconfig"
+export PATH="$PWD/.local/bin:$HOME/.local/bin:$PATH"
+./scripts/install.sh
+source scripts/check-context.sh
+kubectl apply -f argocd/application.yaml
+kubectl -n argocd get application taskflow
+./scripts/observe.sh taskflow 100
+```
+
+Reprendre les deux `export` dans chaque nouveau terminal. Le contexte du lab doit être `kind-cicd`.
+La branche `main` contient l’état final ; voir le [guide pour rejouer les exercices](docs/REPLAY.md).
+
+- Interface Argo CD : `./scripts/argocd-ui.sh`
+- Suivi : `kubectl argo rollouts get rollout taskflow -n taskflow --watch`
+- Dashboard : `kubectl argo rollouts dashboard -n taskflow`
+
 ## Validation et ajustements
 
 La CI vérifie les manifests et les scripts. Les manifests ont aussi été validés par Kubernetes,
@@ -137,6 +158,8 @@ for script in scripts/*.sh; do bash -n "$script"; done
 L’installation d’Argo Rollouts a nécessité `--server-side` pour éviter la limite de taille des annotations.
 Kubernetes et kubectl sont fixés en 1.37.0. Le script d’observation vérifie le contexte et les paramètres.
 Les captures viennent du cluster local ; les graphiques sont [régénérables à partir des mesures](docs/images/README.md).
+
+</details>
 
 ## Références
 
