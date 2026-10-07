@@ -1,0 +1,236 @@
+{
+  "at": "2026-10-07T07:49:44.552197+00:00",
+  "application": {
+    "source": {
+      "path": "apps/taskflow",
+      "repoURL": "https://github.com/Waddenn/taskflow-gitops.git",
+      "targetRevision": "main"
+    },
+    "sync": {
+      "comparedTo": {
+        "destination": {
+          "namespace": "taskflow",
+          "server": "https://kubernetes.default.svc"
+        },
+        "source": {
+          "path": "apps/taskflow",
+          "repoURL": "https://github.com/Waddenn/taskflow-gitops.git",
+          "targetRevision": "main"
+        }
+      },
+      "revision": "cc7bdcad3023bcbeac90885d2e4d35fdd9f6475b",
+      "status": "Synced"
+    },
+    "health": {
+      "lastTransitionTime": "2026-10-07T07:49:44Z",
+      "status": "Healthy"
+    },
+    "reconciledAt": "2026-10-07T07:49:42Z"
+  },
+  "deployment": [
+    {
+      "name": "taskflow",
+      "status": {
+        "availableReplicas": 4,
+        "conditions": [
+          {
+            "lastTransitionTime": "2026-10-07T07:49:42Z",
+            "lastUpdateTime": "2026-10-07T07:49:42Z",
+            "message": "Deployment has minimum availability.",
+            "reason": "MinimumReplicasAvailable",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2026-10-07T07:44:58Z",
+            "lastUpdateTime": "2026-10-07T07:49:44Z",
+            "message": "ReplicaSet \"taskflow-745bdbf6f8\" has successfully progressed.",
+            "reason": "NewReplicaSetAvailable",
+            "status": "True",
+            "type": "Progressing"
+          }
+        ],
+        "observedGeneration": 8,
+        "readyReplicas": 4,
+        "replicas": 4,
+        "terminatingReplicas": 1,
+        "updatedReplicas": 4
+      },
+      "replicas": 4,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow"
+        }
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%"
+        },
+        "type": "RollingUpdate"
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    }
+  ],
+  "rollout": [],
+  "replicaset": [
+    {
+      "name": "taskflow-5df67d86bd",
+      "status": {
+        "observedGeneration": 3,
+        "replicas": 0,
+        "terminatingReplicas": 0
+      },
+      "replicas": 0,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow",
+          "pod-template-hash": "5df67d86bd"
+        }
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:1.1.0"
+      ]
+    },
+    {
+      "name": "taskflow-745bdbf6f8",
+      "status": {
+        "availableReplicas": 4,
+        "fullyLabeledReplicas": 4,
+        "observedGeneration": 8,
+        "readyReplicas": 4,
+        "replicas": 4,
+        "terminatingReplicas": 1
+      },
+      "replicas": 4,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow",
+          "pod-template-hash": "745bdbf6f8"
+        }
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-76547969d7",
+      "status": {
+        "observedGeneration": 7,
+        "replicas": 0,
+        "terminatingReplicas": 0
+      },
+      "replicas": 0,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow",
+          "pod-template-hash": "76547969d7"
+        }
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0"
+      ]
+    }
+  ],
+  "service": [
+    {
+      "name": "taskflow",
+      "status": {
+        "loadBalancer": {}
+      },
+      "selector": {
+        "app": "taskflow"
+      },
+      "images": []
+    }
+  ],
+  "pod": [
+    {
+      "name": "taskflow-745bdbf6f8-4xstz",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:3e5f30d0018dbc2898d9c94656c862d63a2afe5336c930c027b052ad301a496f"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-745bdbf6f8-527bh",
+      "status": {
+        "phase": "Succeeded",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": false,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:3e5f30d0018dbc2898d9c94656c862d63a2afe5336c930c027b052ad301a496f"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-745bdbf6f8-bmzhl",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:3e5f30d0018dbc2898d9c94656c862d63a2afe5336c930c027b052ad301a496f"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-745bdbf6f8-ffdnt",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:3e5f30d0018dbc2898d9c94656c862d63a2afe5336c930c027b052ad301a496f"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-745bdbf6f8-np7jr",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:3e5f30d0018dbc2898d9c94656c862d63a2afe5336c930c027b052ad301a496f"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    }
+  ]
+}

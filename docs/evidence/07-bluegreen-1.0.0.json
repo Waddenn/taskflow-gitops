@@ -1,0 +1,221 @@
+{
+  "at": "2026-10-07T07:57:14.979001+00:00",
+  "application": {
+    "source": {
+      "path": "apps/taskflow",
+      "repoURL": "https://github.com/Waddenn/taskflow-gitops.git",
+      "targetRevision": "main"
+    },
+    "sync": {
+      "comparedTo": {
+        "destination": {
+          "namespace": "taskflow",
+          "server": "https://kubernetes.default.svc"
+        },
+        "source": {
+          "path": "apps/taskflow",
+          "repoURL": "https://github.com/Waddenn/taskflow-gitops.git",
+          "targetRevision": "main"
+        }
+      },
+      "revision": "4250e170aad82eb13d3b00912d721c9f2bc08784",
+      "status": "Synced"
+    },
+    "health": {
+      "lastTransitionTime": "2026-10-07T07:57:13Z",
+      "status": "Healthy"
+    },
+    "reconciledAt": "2026-10-07T07:57:10Z"
+  },
+  "deployment": [],
+  "rollout": [
+    {
+      "name": "taskflow",
+      "status": {
+        "HPAReplicas": 4,
+        "availableReplicas": 4,
+        "blueGreen": {
+          "activeSelector": "5769dcb86c",
+          "previewSelector": "5769dcb86c"
+        },
+        "canary": {},
+        "conditions": [
+          {
+            "lastTransitionTime": "2026-10-07T07:57:07Z",
+            "lastUpdateTime": "2026-10-07T07:57:07Z",
+            "message": "RolloutCompleted",
+            "reason": "RolloutCompleted",
+            "status": "True",
+            "type": "Completed"
+          },
+          {
+            "lastTransitionTime": "2026-10-07T07:57:13Z",
+            "lastUpdateTime": "2026-10-07T07:57:13Z",
+            "message": "Rollout is healthy",
+            "reason": "RolloutHealthy",
+            "status": "True",
+            "type": "Healthy"
+          },
+          {
+            "lastTransitionTime": "2026-10-07T07:57:07Z",
+            "lastUpdateTime": "2026-10-07T07:57:13Z",
+            "message": "ReplicaSet \"taskflow-5769dcb86c\" has successfully progressed.",
+            "reason": "NewReplicaSetAvailable",
+            "status": "True",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2026-10-07T07:57:13Z",
+            "lastUpdateTime": "2026-10-07T07:57:13Z",
+            "message": "Rollout has minimum availability",
+            "reason": "AvailableReason",
+            "status": "True",
+            "type": "Available"
+          }
+        ],
+        "currentPodHash": "5769dcb86c",
+        "observedGeneration": "1",
+        "phase": "Healthy",
+        "readyReplicas": 4,
+        "replicas": 4,
+        "selector": "app=taskflow,rollouts-pod-template-hash=5769dcb86c",
+        "stableRS": "5769dcb86c",
+        "updatedReplicas": 4
+      },
+      "replicas": 4,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow"
+        }
+      },
+      "strategy": {
+        "blueGreen": {
+          "activeService": "taskflow",
+          "autoPromotionEnabled": false,
+          "previewService": "taskflow-preview",
+          "scaleDownDelaySeconds": 30
+        }
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0"
+      ]
+    }
+  ],
+  "replicaset": [
+    {
+      "name": "taskflow-5769dcb86c",
+      "status": {
+        "availableReplicas": 4,
+        "fullyLabeledReplicas": 4,
+        "observedGeneration": 2,
+        "readyReplicas": 4,
+        "replicas": 4,
+        "terminatingReplicas": 0
+      },
+      "replicas": 4,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow",
+          "rollouts-pod-template-hash": "5769dcb86c"
+        }
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0"
+      ]
+    }
+  ],
+  "service": [
+    {
+      "name": "taskflow",
+      "status": {
+        "loadBalancer": {}
+      },
+      "selector": {
+        "app": "taskflow",
+        "rollouts-pod-template-hash": "5769dcb86c"
+      },
+      "images": []
+    },
+    {
+      "name": "taskflow-preview",
+      "status": {
+        "loadBalancer": {}
+      },
+      "selector": {
+        "app": "taskflow",
+        "rollouts-pod-template-hash": "5769dcb86c"
+      },
+      "images": []
+    }
+  ],
+  "pod": [
+    {
+      "name": "taskflow-5769dcb86c-6njcc",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:ac913bbba15432c4d4936682e313426b79b9fea2c26c65c1479fb62f220cf05d"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-5769dcb86c-cb4rm",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:ac913bbba15432c4d4936682e313426b79b9fea2c26c65c1479fb62f220cf05d"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-5769dcb86c-pxfbc",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:ac913bbba15432c4d4936682e313426b79b9fea2c26c65c1479fb62f220cf05d"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-5769dcb86c-wmqjg",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:ac913bbba15432c4d4936682e313426b79b9fea2c26c65c1479fb62f220cf05d"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0"
+      ]
+    }
+  ]
+}

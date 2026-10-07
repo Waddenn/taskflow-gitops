@@ -1,0 +1,29 @@
+{"at": "2026-10-07T07:45:50.239707+00:00", "name": "upstream-scale-selfheal", "seconds": 0.05}
+{"at": "2026-10-07T07:46:34.862050+00:00", "name": "merge", "mergeCommit": {"oid": "958ce9287c8dd22da27e9f11f8ff1ef08c585214"}, "mergedAt": "2026-10-07T07:46:33Z", "title": "chore: pr\u00e9parer le lab GitOps et valider les manifests", "url": "https://github.com/Waddenn/taskflow-gitops/pull/1"}
+{"at": "2026-10-07T07:48:38.640175+00:00", "name": "merge", "mergeCommit": {"oid": "cc7bdcad3023bcbeac90885d2e4d35fdd9f6475b"}, "mergedAt": "2026-10-07T07:48:36Z", "title": "feat: d\u00e9ployer TaskFlow 2.0.0 par GitOps", "url": "https://github.com/Waddenn/taskflow-gitops/pull/2"}
+{"at": "2026-10-07T07:49:37.111903+00:00", "name": "converged", "sha": "cc7bdcad3023bcbeac90885d2e4d35fdd9f6475b", "health": "Healthy", "wait_seconds": 57.67}
+{"at": "2026-10-07T07:49:41.032064+00:00", "name": "selfHeal-replicas", "seconds": 0.54}
+{"at": "2026-10-07T07:49:43.168286+00:00", "name": "selfHeal-image", "seconds": 0.4}
+{"at": "2026-10-07T07:50:13.081302+00:00", "name": "merge", "mergeCommit": {"oid": "4dff44c172696bc8b63d563fcbb0d94c8ebaa963"}, "mergedAt": "2026-10-07T07:50:11Z", "title": "revert: revenir \u00e0 TaskFlow 1.0.0 apr\u00e8s le test de d\u00e9rive", "url": "https://github.com/Waddenn/taskflow-gitops/pull/3"}
+{"at": "2026-10-07T07:52:02.909224+00:00", "name": "converged", "sha": "4dff44c172696bc8b63d563fcbb0d94c8ebaa963", "health": "Healthy", "wait_seconds": 109.07}
+{"at": "2026-10-07T07:52:12.916906+00:00", "name": "merge", "mergeCommit": {"oid": "ea495183b39649c9b5d0700cb754c16907dd8d63"}, "mergedAt": "2026-10-07T07:52:11Z", "title": "test: retirer le Service pour observer le prune GitOps", "url": "https://github.com/Waddenn/taskflow-gitops/pull/4"}
+{"at": "2026-10-07T07:53:15.864242+00:00", "name": "converged", "sha": "ea495183b39649c9b5d0700cb754c16907dd8d63", "health": "Healthy", "wait_seconds": 61.79}
+{"at": "2026-10-07T07:53:24.473364+00:00", "name": "merge", "mergeCommit": {"oid": "102024e348095cbbdc296541359ddb1cb990c7ae"}, "mergedAt": "2026-10-07T07:53:22Z", "title": "fix: restaurer le Service apr\u00e8s le test prune", "url": "https://github.com/Waddenn/taskflow-gitops/pull/5"}
+{"at": "2026-10-07T07:55:35.539653+00:00", "name": "converged", "sha": "102024e348095cbbdc296541359ddb1cb990c7ae", "health": "Healthy", "wait_seconds": 129.81}
+{"at": "2026-10-07T07:56:08.651405+00:00", "name": "merge", "mergeCommit": {"oid": "4250e170aad82eb13d3b00912d721c9f2bc08784"}, "mergedAt": "2026-10-07T07:56:06Z", "title": "feat: remplacer le Deployment par un Rollout Blue-Green", "url": "https://github.com/Waddenn/taskflow-gitops/pull/6"}
+{"at": "2026-10-07T07:57:14.803684+00:00", "name": "converged", "sha": "4250e170aad82eb13d3b00912d721c9f2bc08784", "health": "Healthy", "wait_seconds": 63.8}
+{"at": "2026-10-07T07:57:53.077757+00:00", "name": "merge", "mergeCommit": {"oid": "d21e4a0aff7a0dbfcf1638fa1cbda06c3f63a0a2"}, "mergedAt": "2026-10-07T07:57:48Z", "title": "feat: pr\u00e9parer TaskFlow 1.1.0 sur la preview Blue-Green", "url": "https://github.com/Waddenn/taskflow-gitops/pull/7"}
+{"at": "2026-10-07T07:58:15.972627+00:00", "name": "converged", "sha": "d21e4a0aff7a0dbfcf1638fa1cbda06c3f63a0a2", "health": null, "wait_seconds": 20.61}
+{"at": "2026-10-07T07:59:38.590912+00:00", "name": "bluegreen-promote"}
+{"at": "2026-10-07T08:00:39.542126+00:00", "name": "merge", "mergeCommit": {"oid": "f3e05ffd83401a73dbfe1ee7c581bbc2500e10cc"}, "mergedAt": "2026-10-07T08:00:37Z", "title": "feat: passer TaskFlow 1.1.0 en strat\u00e9gie Canary", "url": "https://github.com/Waddenn/taskflow-gitops/pull/8"}
+{"at": "2026-10-07T08:01:03.913826+00:00", "name": "converged", "sha": "f3e05ffd83401a73dbfe1ee7c581bbc2500e10cc", "health": "Healthy", "wait_seconds": 22.69}
+{"at": "2026-10-07T08:01:42.445430+00:00", "name": "merge", "mergeCommit": {"oid": "4f524a80c2e9902c376d9fb4c3e7c8144c6f14d2"}, "mergedAt": "2026-10-07T08:01:39Z", "title": "feat: livrer TaskFlow 2.0.0 par paliers Canary", "url": "https://github.com/Waddenn/taskflow-gitops/pull/9"}
+{"at": "2026-10-07T08:03:03.475958+00:00", "name": "converged", "sha": "4f524a80c2e9902c376d9fb4c3e7c8144c6f14d2", "health": null, "wait_seconds": 78.22}
+{"at": "2026-10-07T08:03:55.801200+00:00", "name": "canary-promote"}
+{"at": "2026-10-07T08:07:50.742180+00:00", "name": "converged", "sha": "415128d62b62662be1b6e9c79adf733464f65645", "health": "Healthy", "wait_seconds": 0.06}
+{"at": "2026-10-07T08:08:21.322486+00:00", "name": "merge", "mergeCommit": {"oid": "973675c8f678a0d72a3039d38f42e0b078665c9c"}, "mergedAt": "2026-10-07T08:08:19Z", "title": "test: exposer la version d\u00e9fectueuse 2.1.0 au canary", "url": "https://github.com/Waddenn/taskflow-gitops/pull/11"}
+{"at": "2026-10-07T08:08:37.032415+00:00", "name": "converged", "sha": "973675c8f678a0d72a3039d38f42e0b078665c9c", "health": null, "wait_seconds": 14.48}
+{"at": "2026-10-07T08:09:07.267338+00:00", "name": "canary-abort"}
+{"at": "2026-10-07T08:09:13.737960+00:00", "name": "converged", "sha": "973675c8f678a0d72a3039d38f42e0b078665c9c", "health": "Degraded", "wait_seconds": 0.06}
+{"at": "2026-10-07T08:11:14.603704+00:00", "name": "merge", "mergeCommit": {"oid": "f3af0cd7395f0f6fc5b1a99dfaa794ddba05df84"}, "mergedAt": "2026-10-07T08:11:11Z", "title": "revert: aligner Git sur TaskFlow 2.0.0 apr\u00e8s abort", "url": "https://github.com/Waddenn/taskflow-gitops/pull/12"}
+{"at": "2026-10-07T08:11:42.761909+00:00", "name": "converged", "sha": "f3af0cd7395f0f6fc5b1a99dfaa794ddba05df84", "health": "Healthy", "wait_seconds": 26.78}
