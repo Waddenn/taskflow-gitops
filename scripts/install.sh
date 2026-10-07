@@ -10,7 +10,7 @@ ARGOCD_VERSION="v3.5.3"
 ROLLOUTS_VERSION="v1.10.0"
 CLUSTER="cicd"
 IMAGE_REPO="ghcr.io/9m7fjfpv9k-cyber/taskflow"
-LAB_IMAGES="${IMAGE_REPO}:1.0.0 ${IMAGE_REPO}:1.1.0 ${IMAGE_REPO}:2.0.0 ${IMAGE_REPO}:2.1.0 curlimages/curl:latest grafana/k6:latest"
+LAB_IMAGES="${IMAGE_REPO}:1.0.0 ${IMAGE_REPO}:1.1.0 ${IMAGE_REPO}:2.0.0 ${IMAGE_REPO}:2.1.0 curlimages/curl:8.12.1 grafana/k6:latest"
 
 BIN_DIR="${HOME}/.local/bin"
 mkdir -p "${BIN_DIR}"
@@ -65,7 +65,7 @@ kubectl -n argocd patch configmap argocd-cm --type merge -p '{"data":{"timeout.r
 
 step "Argo Rollouts ${ROLLOUTS_VERSION}"
 kubectl create namespace argo-rollouts --dry-run=client -o yaml | kubectl apply -f - >/dev/null
-kubectl apply -n argo-rollouts \
+kubectl apply -n argo-rollouts --server-side \
   -f "https://github.com/argoproj/argo-rollouts/releases/download/${ROLLOUTS_VERSION}/install.yaml" >/dev/null
 
 step "Attente du démarrage (quelques minutes la première fois)"
@@ -84,13 +84,13 @@ for image in ${LAB_IMAGES}; do
   fi
 done
 
-ARGOCD_PASSWORD="$(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d)"
+
 
 step "Installation terminée"
 cat <<INFO
   Cluster      : kind-${CLUSTER}
   Argo CD      : ./scripts/argocd-ui.sh, puis https://localhost:8080
-                 utilisateur admin, mot de passe ${ARGOCD_PASSWORD}
+                 utilisateur admin (mot de passe affiché par argocd-ui.sh)
   Rollouts     : kubectl argo rollouts version
 
   Si une commande est introuvable dans un nouveau terminal, ajoutez cette ligne
