@@ -37,5 +37,5 @@ Il peut être relancé sans risque.
 
 ## Équipe
 
-<!-- Noms du binôme -->
-- À compléter
+- Nicolas Roulois ([@Niccoco78](https://github.com/Niccoco78))
+- [@Waddenn](https://github.com/Waddenn)
