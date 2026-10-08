@@ -19,7 +19,7 @@ spec:
         app: taskflow
     spec:
       securityContext:
-        runAsNonRoot: true
+        runAsNonRoot: false
       containers:
         - name: taskflow
           image: ghcr.io/9m7fjfpv9k-cyber/taskflow:2.2.0
@@ -40,8 +40,6 @@ spec:
             requests:
               cpu: 50m
               memory: 64Mi
-            limits:
-              memory: 256Mi
   strategy:
     canary:
       canaryService: taskflow-canary
