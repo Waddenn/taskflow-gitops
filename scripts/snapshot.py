@@ -2,14 +2,21 @@
 """Capture des preuves sans kubeconfig, Secret, jeton ni adresse du cluster."""
 import json
 import subprocess
+import sys
 from datetime import datetime, timezone
 
 
 def kube(*args):
-    return subprocess.check_output(['kubectl', *args], text=True)
+    try:
+        return subprocess.check_output(['kubectl', *args], text=True, timeout=30)
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired, OSError) as error:
+        print(f'ERREUR kubectl : {error}', file=sys.stderr)
+        sys.exit(1)
 
 
-assert kube('config', 'current-context').strip() == 'kind-cicd'
+if kube('config', 'current-context').strip() != 'kind-cicd':
+    print('ERREUR : ce lab exige le contexte kind-cicd. Vérifier KUBECONFIG.', file=sys.stderr)
+    sys.exit(1)
 app = json.loads(kube('-n', 'argocd', 'get', 'application', 'taskflow', '-o', 'json'))
 result = {'at': datetime.now(timezone.utc).isoformat(), 'application': {
     'source': app['spec']['source'],
