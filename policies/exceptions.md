@@ -3,7 +3,7 @@
 - Date : **8 octobre 2026**.
 - Échéance : **15 octobre 2026**, sans renouvellement automatique.
 - Responsable du suivi : **Tom PATELAS**.
-- Validation : PR d’intégration de la PSSI (lien dans le journal J3 C).
+- Validation : [PR #28 fusionnée](https://github.com/Waddenn/taskflow-gitops/pull/28), sans exigence de revue indépendante dans le ruleset du lab.
 - Image : `ghcr.io/9m7fjfpv9k-cyber/taskflow:2.2.0`.
 - Digest exclusif : `sha256:007c6d93784684df01a816e63e49d1bd5aa47ff9857f7fb452660ab49455876e`.
 

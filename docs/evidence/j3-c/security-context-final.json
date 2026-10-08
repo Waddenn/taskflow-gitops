@@ -1,0 +1,9 @@
+{
+  "image": "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.2.0",
+  "securityContext": {
+    "runAsNonRoot": true
+  },
+  "memory": "256Mi",
+  "phase": "Healthy",
+  "readyReplicas": 4
+}

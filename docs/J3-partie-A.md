@@ -83,5 +83,5 @@ de référence manuel a été exécuté dans cette partie A.
 ## Limite de ce rendu
 
 À la fin de cette étape, les parties B et C n’étaient pas réalisées.
-La [partie B a ensuite été réalisée](J3-partie-B.md) ; la partie C reste hors périmètre. Les preuves d’incident J2 existantes
+La [partie B a ensuite été réalisée](J3-partie-B.md) ; la [partie C a ensuite été réalisée](J3-partie-C.md). Les preuves d’incident J2 existantes
 restent des observations J2 et ne démontrent pas un abort automatique J3.

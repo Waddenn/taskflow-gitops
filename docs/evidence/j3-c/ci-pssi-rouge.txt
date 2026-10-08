@@ -1,0 +1,12 @@
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	﻿2026-10-08T09:59:09.1570435Z ##[group]Run conftest verify --policy policies/
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.1572228Z ^[[36;1mconftest verify --policy policies/^[[0m
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.1573899Z ^[[36;1mconftest test apps/ --policy policies/^[[0m
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.1641456Z shell: /usr/bin/bash -e {0}
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.1642779Z ##[endgroup]
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.1989667Z
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.1991547Z ^[[32m11 tests, 11 passed, 0 warnings, 0 failures, 0 exceptions, 0 skipped^[[0m
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.2223820Z ^[[31mFAIL^[[0m - apps/taskflow/rollout.yaml - main - PSSI-R3 : le conteneur 'taskflow' doit avoir resources.limits.memory
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.2228770Z ^[[31mFAIL^[[0m - apps/taskflow/rollout.yaml - main - PSSI-R4 : le pod de 'taskflow' doit déclarer securityContext.runAsNonRoot: true
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.2231265Z
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.2232176Z ^[[31m40 tests, 38 passed, 0 warnings, 2 failures, 0 exceptions^[[0m
+PSSI manifests (conftest)	Tester les règles puis les manifests (R1 à R4)	2026-10-08T09:59:09.2257263Z ##[error]Process completed with exit code 1.
