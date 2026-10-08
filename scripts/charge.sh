@@ -6,6 +6,7 @@ set -uo pipefail
 export PATH="${HOME}/.local/bin:${PATH}"
 CIBLE="${1:-http://taskflow}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+source "${SCRIPT_DIR}/check-context.sh"
 SCENARIO="${SCRIPT_DIR}/../exemples/robustesse/configmap-k6.yaml"
 
 echo "Test de charge k6 sur ${CIBLE} (30 s, 5 utilisateurs virtuels)..."
