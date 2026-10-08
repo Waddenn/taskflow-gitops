@@ -60,7 +60,7 @@ for folder in ['apps/taskflow', 'exemples/bluegreen', 'exemples/canary', 'exempl
             config = next(d for d in docs if d['kind'] == 'ConfigMap')
             assert config['metadata']['name'] == 'k6-robustesse'
             scenario = config['data']['robustesse.js']
-            for required in ["vus: 5", "duration: '30s'", "'rate<0.02'",
+            for required in ["vus: 5", "duration: '60s'", "'rate<0.02'",
                              "'p(95)<250'", 'http.get(`${TARGET}/tasks`)']:
                 assert required in scenario, f'{folder}: scénario k6 incomplet'
         else:
