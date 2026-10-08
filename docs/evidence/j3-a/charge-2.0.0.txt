@@ -1,10 +1,10 @@
 Test de charge k6 sur http://taskflow (30 s, 5 utilisateurs virtuels)...
 
-         /\      Grafana   /‾‾/  
-    /\  /  \     |\  __   /  /   
-   /  \/    \    | |/ /  /   ‾‾\ 
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+   /  \/    \    | |/ /  /   ‾‾\
   /          \   |   (  |  (‾)  |
- / __________ \  |_|\_\  \_____/ 
+ / __________ \  |_|\_\  \_____/
 
 
      execution: local
@@ -106,7 +106,7 @@ running (0m30.0s), 5/5 VUs, 733 complete and 0 interrupted iterations
 default   [ 100% ] 5 VUs  30.0s/30s
 
 
-  █ THRESHOLDS 
+  █ THRESHOLDS
 
     http_req_duration
     ✓ 'p(95)<250' p(95)=4.23ms
@@ -115,7 +115,7 @@ default   [ 100% ] 5 VUs  30.0s/30s
     ✓ 'rate<0.02' rate=0.00%
 
 
-  █ TOTAL RESULTS 
+  █ TOTAL RESULTS
 
     checks_total.......: 738     24.456089/s
     checks_succeeded...: 100.00% 738 out of 738
@@ -124,8 +124,8 @@ default   [ 100% ] 5 VUs  30.0s/30s
     ✓ statut 200
 
     HTTP
-    http_req_duration..............: avg=3.21ms   min=1.74ms   med=3.18ms   max=6.87ms   p(90)=3.97ms   p(95)=4.23ms  
-      { expected_response:true }...: avg=3.21ms   min=1.74ms   med=3.18ms   max=6.87ms   p(90)=3.97ms   p(95)=4.23ms  
+    http_req_duration..............: avg=3.21ms   min=1.74ms   med=3.18ms   max=6.87ms   p(90)=3.97ms   p(95)=4.23ms
+      { expected_response:true }...: avg=3.21ms   min=1.74ms   med=3.18ms   max=6.87ms   p(90)=3.97ms   p(95)=4.23ms
     http_req_failed................: 0.00% 0 out of 738
     http_reqs......................: 738   24.456089/s
 
