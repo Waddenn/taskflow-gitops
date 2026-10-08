@@ -1,0 +1,4 @@
+NAME                            SCOPE        VERSIONS            CREATED AT
+rollouts.argoproj.io            Namespaced   v1alpha1(storage)   2026-10-08T08:04:29Z
+analysistemplates.argoproj.io   Namespaced   v1alpha1(storage)   2026-10-08T08:04:29Z
+analysisruns.argoproj.io        Namespaced   v1alpha1(storage)   2026-10-08T08:04:29Z

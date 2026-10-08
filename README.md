@@ -15,6 +15,11 @@ Dépôt basé sur [celui de l’intervenant](https://github.com/9m7fjfpv9k-cyber
 
 **État final du lab : TaskFlow 2.0.0, quatre pods prêts, Synced / Healthy** — configuration conforme à Git et application considérée saine par Argo CD.
 
+**Suite J3 — partie A :** [journal et preuves](docs/J3-partie-A.md).
+Référence k6 sur 2.0.0 : 738 requêtes, 0 % d’erreurs, p95 de 4,23 ms.
+Le canary dispose désormais d’une analyse automatique à 25 %.
+Les parties B et C du J3 ne sont pas réalisées.
+
 ## Fonctionnement
 
 ```mermaid
