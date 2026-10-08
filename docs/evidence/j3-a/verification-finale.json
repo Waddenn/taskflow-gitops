@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-08T08:08:44.082716+00:00",
+  "revision": "4af6f7bcf38d85cecd15e7076402f6b6654715ce",
+  "sync": "Synced",
+  "health": "Healthy",
+  "image": "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0",
+  "readyReplicas": 4,
+  "rolloutCount": 1,
+  "deploymentCount": 0,
+  "analysisTemplate": "robustesse-k6",
+  "configMap": "k6-robustesse",
+  "canaryService": "taskflow-canary",
+  "canarySelector": {
+    "app": "taskflow",
+    "rollouts-pod-template-hash": "c6cf57bd6"
+  },
+  "analysisRunCount": 0
+}
