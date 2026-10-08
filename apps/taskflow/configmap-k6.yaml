@@ -14,6 +14,8 @@ data:
     export const options = {
       vus: 5,
       duration: '60s',
+      noConnectionReuse: true,
+      setupTimeout: '40s',
       thresholds: {
         http_req_failed: ['rate<0.02'],
         http_req_duration: ['p(95)<250'],
@@ -21,6 +23,26 @@ data:
     };
 
     const TARGET = __ENV.TARGET || 'http://taskflow-canary';
+
+    // Attendre la convergence du Service avant de mesurer la nouvelle révision.
+    export function setup() {
+      const expected = __ENV.EXPECTED_HASH;
+      if (!expected) return; // Charge manuelle sur le service principal.
+      let consecutive = 0;
+      for (let attempt = 0; attempt < 30; attempt++) {
+        const response = http.get(`${TARGET}/health`, { timeout: '1s' });
+        let pod = '';
+        try { pod = response.json('pod') || ''; } catch (_) {}
+        consecutive = response.status === 200 && pod.includes(`-${expected}-`)
+          ? consecutive + 1 : 0;
+        if (consecutive === 3) {
+          console.log(`Cible vérifiée : ${pod}, hash attendu ${expected}`);
+          return;
+        }
+        sleep(0.5);
+      }
+      throw new Error(`Le Service ne cible pas la révision attendue ${expected}`);
+    }
 
     export default function () {
       const res = http.get(`${TARGET}/tasks`);

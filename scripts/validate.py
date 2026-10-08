@@ -41,26 +41,29 @@ for folder in ['apps/taskflow', 'exemples/bluegreen', 'exemples/canary', 'exempl
                 {'setWeight': 25},
                 {'analysis': {
                     'templates': [{'templateName': 'robustesse-k6'}],
-                    'args': [{'name': 'cible', 'value': 'http://taskflow-canary'}]}},
+                    'args': [{'name': 'cible', 'value': 'http://taskflow-canary'},
+                             {'name': 'pod-hash', 'valueFrom': {'podTemplateHashValue': 'Latest'}}]}},
                 {'setWeight': 50}, {'pause': {'duration': '30s'}},
                 {'setWeight': 75}, {'pause': {'duration': '30s'}}]
             analysis = next(d for d in docs if d['kind'] == 'AnalysisTemplate')
             assert analysis['metadata']['name'] == 'robustesse-k6'
-            assert analysis['spec']['args'] == [{'name': 'cible'}]
+            assert analysis['spec']['args'] == [{'name': 'cible'}, {'name': 'pod-hash'}]
             job = analysis['spec']['metrics'][0]['provider']['job']['spec']
             assert job['backoffLimit'] == 0
             pod = job['template']['spec']
             assert pod['restartPolicy'] == 'Never'
             k6 = pod['containers'][0]
             assert k6['args'] == ['run', '/scripts/robustesse.js']
-            assert k6['env'] == [{'name': 'TARGET', 'value': '{{args.cible}}'}]
+            assert k6['env'] == [
+                {'name': 'TARGET', 'value': '{{args.cible}}'},
+                {'name': 'EXPECTED_HASH', 'value': '{{args.pod-hash}}'}]
             assert k6['volumeMounts'] == [{'name': 'scripts', 'mountPath': '/scripts'}]
             assert pod['volumes'] == [
                 {'name': 'scripts', 'configMap': {'name': 'k6-robustesse'}}]
             config = next(d for d in docs if d['kind'] == 'ConfigMap')
             assert config['metadata']['name'] == 'k6-robustesse'
             scenario = config['data']['robustesse.js']
-            for required in ["vus: 5", "duration: '60s'", "'rate<0.02'",
+            for required in ["noConnectionReuse: true", "__ENV.EXPECTED_HASH", "vus: 5", "duration: '60s'", "'rate<0.02'",
                              "'p(95)<250'", 'http.get(`${TARGET}/tasks`)']:
                 assert required in scenario, f'{folder}: scénario k6 incomplet'
         else:

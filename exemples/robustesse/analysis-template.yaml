@@ -7,6 +7,7 @@ metadata:
 spec:
   args:
     - name: cible
+    - name: pod-hash
   metrics:
     - name: test-de-charge-k6
       provider:
@@ -24,6 +25,8 @@ spec:
                     env:
                       - name: TARGET
                         value: "{{args.cible}}"
+                      - name: EXPECTED_HASH
+                        value: "{{args.pod-hash}}"
                     volumeMounts:
                       - name: scripts
                         mountPath: /scripts

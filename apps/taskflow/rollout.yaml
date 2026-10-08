@@ -51,6 +51,9 @@ spec:
             args:
               - name: cible
                 value: http://taskflow-canary
+              - name: pod-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
         - setWeight: 50
         - pause:
             duration: 30s
