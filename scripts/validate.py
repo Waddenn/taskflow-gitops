@@ -17,7 +17,7 @@ for folder in ['apps/taskflow', 'exemples/bluegreen', 'exemples/canary', 'exempl
     assert spec['replicas'] == 4, f'{folder}: 4 replicas requis'
     assert spec['selector']['matchLabels'] == spec['template']['metadata']['labels']
     container = spec['template']['spec']['containers'][0]
-    assert re.fullmatch(r'ghcr.io/9m7fjfpv9k-cyber/taskflow:(1\.0\.0|1\.1\.0|2\.0\.0|2\.1\.0)', container['image'])
+    assert re.fullmatch(r'ghcr.io/9m7fjfpv9k-cyber/taskflow:(1\.0\.0|1\.1\.0|2\.0\.0|2\.1\.0|2\.2\.0)', container['image'])
     for probe in ['readinessProbe', 'livenessProbe']:
         assert container[probe]['httpGet'] == {'path': '/health', 'port': 'http'}
     services = {d['metadata']['name']: d for d in docs if d['kind'] == 'Service'}
