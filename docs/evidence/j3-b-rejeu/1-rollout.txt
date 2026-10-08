@@ -1,0 +1,28 @@
+Name:            taskflow
+Namespace:       bac-a-sable
+Status:          ✖ Degraded
+Message:         RolloutAborted: Rollout aborted update to revision 2: Step-based analysis phase error/failed: Metric "test-de-charge-k6" assessed Failed due to failed (1) > failureLimit (0)
+Strategy:        Canary
+  Step:          0/6
+  SetWeight:     0
+  ActualWeight:  0
+Images:          ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0 (stable)
+Replicas:
+  Desired:       4
+  Current:       4
+  Updated:       0
+  Ready:         4
+  Available:     4
+
+NAME                                                                 KIND         STATUS        AGE   INFO
+⟳ taskflow                                                           Rollout      ✖ Degraded    119m  
+├──# revision:2                                                                                       
+│  ├──⧉ taskflow-df976ccb5                                           ReplicaSet   • ScaledDown  118m  canary
+│  └──α taskflow-df976ccb5-2-1                                       AnalysisRun  ✖ Failed      118m  ✖ 1
+│     └──⊞ 4b8fd8b0-ad3a-4b57-960b-5f06332b4180.test-de-charge-k6.1  Job          ✖ Failed      118m  
+└──# revision:1                                                                                       
+   └──⧉ taskflow-c6cf57bd6                                           ReplicaSet   ✔ Healthy     119m  stable
+      ├──□ taskflow-c6cf57bd6-k9n5x                                  Pod          ✔ Running     119m  ready:1/1
+      ├──□ taskflow-c6cf57bd6-pptb9                                  Pod          ✔ Running     119m  ready:1/1
+      ├──□ taskflow-c6cf57bd6-xrvqb                                  Pod          ✔ Running     119m  ready:1/1
+      └──□ taskflow-c6cf57bd6-ml2s5                                  Pod          ✔ Running     117m  ready:1/1
