@@ -1,0 +1,2 @@
+Exceptions expirées : code de sortie 1 (1 attendu)
+9 vulnérabilités HIGH redeviennent bloquantes.
