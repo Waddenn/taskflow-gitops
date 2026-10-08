@@ -1,0 +1,119 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /scripts/robustesse.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 1m30s max duration (incl. graceful stop):
+              * default: 5 looping VUs for 1m0s (gracefulStop: 30s)
+
+
+Run       [ 100% ] setup()
+time="2026-10-08T09:59:31Z" level=info msg="Cible vérifiée : taskflow-df976ccb5-vx6l6, hash attendu df976ccb5" source=console
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✗ 'p(95)<250' p(95)=306.76ms
+
+    http_req_failed
+    ✗ 'rate<0.02' rate=29.38%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 595    9.660196/s
+    checks_succeeded...: 70.42% 419 out of 595
+    checks_failed......: 29.57% 176 out of 595
+
+    ✗ statut 200
+      ↳  70% — ✓ 419 / ✗ 176
+
+    HTTP
+    http_req_duration..............: avg=301.75ms min=1.39ms   med=303.42ms max=331.03ms p(90)=305.92ms p(95)=306.76ms
+      { expected_response:true }...: avg=301.67ms min=1.39ms   med=303.94ms max=331.03ms p(90)=306.26ms p(95)=307.14ms
+    http_req_failed................: 29.38% 176 out of 599
+    http_reqs......................: 599    9.725139/s
+
+    EXECUTION
+    iteration_duration.............: avg=504.78ms min=501.22ms med=504.45ms max=531.5ms  p(90)=507.03ms p(95)=507.9ms 
+    iterations.....................: 595    9.660196/s
+    vus............................: 5      min=0          max=5
+    vus_max........................: 5      min=5          max=5
+
+    NETWORK
+    data_received..................: 95 kB  1.5 kB/s
+    data_sent......................: 57 kB  924 B/s
+
+
+
+
+default ✓ [ 100% ] 5 VUs  1m0s
+time="2026-10-08T10:00:31Z" level=error msg="thresholds on metrics 'http_req_duration, http_req_failed' have been crossed"

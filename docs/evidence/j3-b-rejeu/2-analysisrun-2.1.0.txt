@@ -1,0 +1,86 @@
+Name:         taskflow-df976ccb5-2-1
+Namespace:    bac-a-sable
+Labels:       app=taskflow
+              rollout-type=Step
+              rollouts-pod-template-hash=df976ccb5
+              step-index=1
+Annotations:  rollout.argoproj.io/revision: 2
+API Version:  argoproj.io/v1alpha1
+Kind:         AnalysisRun
+Metadata:
+  Creation Timestamp:  2026-10-08T09:59:29Z
+  Generation:          16
+  Owner References:
+    API Version:           argoproj.io/v1alpha1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Rollout
+    Name:                  taskflow
+    UID:                   d3f5d709-7351-44b8-8326-1bccfc7adb23
+  Resource Version:        69275
+  UID:                     4b8fd8b0-ad3a-4b57-960b-5f06332b4180
+Spec:
+  Args:
+    Name:   cible
+    Value:  http://taskflow-canary
+    Name:   pod-hash
+    Value:  df976ccb5
+  Metrics:
+    Name:  test-de-charge-k6
+    Provider:
+      Job:
+        Metadata:
+        Spec:
+          Backoff Limit:  0
+          Template:
+            Metadata:
+            Spec:
+              Containers:
+                Args:
+                  run
+                  /scripts/robustesse.js
+                Env:
+                  Name:             TARGET
+                  Value:            {{args.cible}}
+                  Name:             EXPECTED_HASH
+                  Value:            {{args.pod-hash}}
+                Image:              grafana/k6:latest
+                Image Pull Policy:  IfNotPresent
+                Name:               k6
+                Resources:
+                  Limits:
+                    Memory:  256Mi
+                  Requests:
+                    Cpu:     100m
+                    Memory:  64Mi
+                Volume Mounts:
+                  Mount Path:  /scripts
+                  Name:        scripts
+              Restart Policy:  Never
+              Volumes:
+                Config Map:
+                  Name:  k6-robustesse
+                Name:    scripts
+Status:
+  Completed At:  2026-10-08T10:00:44Z
+  Dry Run Summary:
+  Message:  Metric "test-de-charge-k6" assessed Failed due to failed (1) > failureLimit (0)
+  Metric Results:
+    Count:   1
+    Failed:  1
+    Measurements:
+      Finished At:  2026-10-08T10:00:44Z
+      Metadata:
+        Job - Name:       4b8fd8b0-ad3a-4b57-960b-5f06332b4180.test-de-charge-k6.1
+        Job - Namespace:  bac-a-sable
+      Phase:              Failed
+      Resume At:          2026-10-08T10:00:44Z
+      Started At:         2026-10-08T09:59:29Z
+    Name:                 test-de-charge-k6
+    Phase:                Failed
+  Phase:                  Failed
+  Run Summary:
+    Count:     1
+    Failed:    1
+  Started At:  2026-10-08T09:59:29Z
+Events:        <none>

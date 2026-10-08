@@ -25,6 +25,14 @@ Le rejeu mesure 27,71 % d’erreurs et un p95 de 308,43 ms ; la 2.2.0 passe avec
 - [Postmortem 2.1.0 et correction du contrôle k6](docs/postmortem-2.1.0.md)
 - [Partie C : mini-PSSI, tableau des contrôles et PR bloquée](docs/J3-partie-C.md)
 
+**Rejeu de vérification de la correction k6 (Nicolas ROULOIS).** L’incident 2.1.0 a été rejoué
+de zéro dans un namespace isolé (`bac-a-sable`), hors Argo CD, avec les manifests corrigés.
+Le test a d’abord confirmé sa cible (pod `taskflow-df976ccb5`, révision 2.1.0), puis mesuré
+**29,38 % d’erreurs** et un **p95 de 306,76 ms** sur 599 requêtes. L’abort automatique a eu lieu
+environ 1 min 22 s après le lancement, avec un seul pod sur quatre exposé.
+Aucun faux positif : la correction est reproductible. Changement de version par `kubectl`, pas par PR.
+[Les 4 preuves](docs/evidence/j3-b-rejeu/).
+
 Les deux checks PSSI sont obligatoires. La PR #29 est volontairement bloquée sur R3/R4.
 Trivy détecte neuf vulnérabilités HIGH dans l’image du cours : dérogations individuelles
 limitées au digest 2.2.0, jusqu’au 15 octobre 2026 ; elles ne sont pas corrigées.
