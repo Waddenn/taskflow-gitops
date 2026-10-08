@@ -1,0 +1,539 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "batch/v1",
+            "kind": "Job",
+            "metadata": {
+                "annotations": {
+                    "analysisrun.argoproj.io/metric-name": "test-de-charge-k6",
+                    "analysisrun.argoproj.io/name": "taskflow-df976ccb5-4-1",
+                    "analysisrun.argoproj.io/namespace": "taskflow"
+                },
+                "creationTimestamp": "2026-10-08T09:06:50Z",
+                "generation": 1,
+                "labels": {
+                    "analysisrun.argoproj.io/uid": "232965c9-7d69-48d1-bdb7-866ce4c801f4"
+                },
+                "name": "232965c9-7d69-48d1-bdb7-866ce4c801f4.test-de-charge-k6.1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "AnalysisRun",
+                        "name": "taskflow-df976ccb5-4-1",
+                        "uid": "232965c9-7d69-48d1-bdb7-866ce4c801f4"
+                    }
+                ],
+                "resourceVersion": "9039",
+                "uid": "a06d2347-a1d2-4e7d-89ac-e63395c566f0"
+            },
+            "spec": {
+                "backoffLimit": 0,
+                "completionMode": "NonIndexed",
+                "completions": 1,
+                "manualSelector": false,
+                "parallelism": 1,
+                "podReplacementPolicy": "TerminatingOrFailed",
+                "selector": {
+                    "matchLabels": {
+                        "batch.kubernetes.io/controller-uid": "a06d2347-a1d2-4e7d-89ac-e63395c566f0"
+                    }
+                },
+                "suspend": false,
+                "template": {
+                    "metadata": {
+                        "labels": {
+                            "analysisrun.argoproj.io/uid": "232965c9-7d69-48d1-bdb7-866ce4c801f4",
+                            "batch.kubernetes.io/controller-uid": "a06d2347-a1d2-4e7d-89ac-e63395c566f0",
+                            "batch.kubernetes.io/job-name": "232965c9-7d69-48d1-bdb7-866ce4c801f4.test-de-charge-k6.1",
+                            "controller-uid": "a06d2347-a1d2-4e7d-89ac-e63395c566f0",
+                            "job-name": "232965c9-7d69-48d1-bdb7-866ce4c801f4.test-de-charge-k6.1"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "args": [
+                                    "run",
+                                    "/scripts/robustesse.js"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "TARGET",
+                                        "value": "http://taskflow-canary"
+                                    },
+                                    {
+                                        "name": "EXPECTED_HASH",
+                                        "value": "df976ccb5"
+                                    }
+                                ],
+                                "image": "grafana/k6:latest",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "k6",
+                                "resources": {
+                                    "limits": {
+                                        "memory": "256Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "64Mi"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/scripts",
+                                        "name": "scripts"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Never",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "k6-robustesse"
+                                },
+                                "name": "scripts"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": "2026-10-08T09:07:55Z",
+                        "lastTransitionTime": "2026-10-08T09:07:55Z",
+                        "message": "Job has reached the specified backoff limit",
+                        "reason": "BackoffLimitExceeded",
+                        "status": "True",
+                        "type": "FailureTarget"
+                    },
+                    {
+                        "lastProbeTime": "2026-10-08T09:07:55Z",
+                        "lastTransitionTime": "2026-10-08T09:07:55Z",
+                        "message": "Job has reached the specified backoff limit",
+                        "reason": "BackoffLimitExceeded",
+                        "status": "True",
+                        "type": "Failed"
+                    }
+                ],
+                "failed": 1,
+                "ready": 0,
+                "startTime": "2026-10-08T09:06:50Z",
+                "terminating": 0,
+                "uncountedTerminatedPods": {}
+            }
+        },
+        {
+            "apiVersion": "batch/v1",
+            "kind": "Job",
+            "metadata": {
+                "annotations": {
+                    "analysisrun.argoproj.io/metric-name": "test-de-charge-k6",
+                    "analysisrun.argoproj.io/name": "taskflow-c6cf57bd6-3-1",
+                    "analysisrun.argoproj.io/namespace": "taskflow"
+                },
+                "creationTimestamp": "2026-10-08T09:02:27Z",
+                "generation": 1,
+                "labels": {
+                    "analysisrun.argoproj.io/uid": "d831d915-64c5-4c72-b684-6c70c0e6af87"
+                },
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "AnalysisRun",
+                        "name": "taskflow-c6cf57bd6-3-1",
+                        "uid": "d831d915-64c5-4c72-b684-6c70c0e6af87"
+                    }
+                ],
+                "resourceVersion": "8115",
+                "uid": "facc1bce-47e6-410c-abfa-54821693913c"
+            },
+            "spec": {
+                "backoffLimit": 0,
+                "completionMode": "NonIndexed",
+                "completions": 1,
+                "manualSelector": false,
+                "parallelism": 1,
+                "podReplacementPolicy": "TerminatingOrFailed",
+                "selector": {
+                    "matchLabels": {
+                        "batch.kubernetes.io/controller-uid": "facc1bce-47e6-410c-abfa-54821693913c"
+                    }
+                },
+                "suspend": false,
+                "template": {
+                    "metadata": {
+                        "labels": {
+                            "analysisrun.argoproj.io/uid": "d831d915-64c5-4c72-b684-6c70c0e6af87",
+                            "batch.kubernetes.io/controller-uid": "facc1bce-47e6-410c-abfa-54821693913c",
+                            "batch.kubernetes.io/job-name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1",
+                            "controller-uid": "facc1bce-47e6-410c-abfa-54821693913c",
+                            "job-name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "args": [
+                                    "run",
+                                    "/scripts/robustesse.js"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "TARGET",
+                                        "value": "http://taskflow-canary"
+                                    }
+                                ],
+                                "image": "grafana/k6:latest",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "k6",
+                                "resources": {
+                                    "limits": {
+                                        "memory": "256Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "64Mi"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/scripts",
+                                        "name": "scripts"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Never",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "k6-robustesse"
+                                },
+                                "name": "scripts"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": "2026-10-08T09:03:30Z",
+                        "lastTransitionTime": "2026-10-08T09:03:30Z",
+                        "message": "Job has reached the specified backoff limit",
+                        "reason": "BackoffLimitExceeded",
+                        "status": "True",
+                        "type": "FailureTarget"
+                    },
+                    {
+                        "lastProbeTime": "2026-10-08T09:03:30Z",
+                        "lastTransitionTime": "2026-10-08T09:03:30Z",
+                        "message": "Job has reached the specified backoff limit",
+                        "reason": "BackoffLimitExceeded",
+                        "status": "True",
+                        "type": "Failed"
+                    }
+                ],
+                "failed": 1,
+                "ready": 0,
+                "startTime": "2026-10-08T09:02:27Z",
+                "terminating": 0,
+                "uncountedTerminatedPods": {}
+            }
+        },
+        {
+            "apiVersion": "batch/v1",
+            "kind": "Job",
+            "metadata": {
+                "annotations": {
+                    "analysisrun.argoproj.io/metric-name": "test-de-charge-k6",
+                    "analysisrun.argoproj.io/name": "taskflow-df976ccb5-2-1",
+                    "analysisrun.argoproj.io/namespace": "taskflow"
+                },
+                "creationTimestamp": "2026-10-08T08:58:12Z",
+                "generation": 1,
+                "labels": {
+                    "analysisrun.argoproj.io/uid": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca"
+                },
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "AnalysisRun",
+                        "name": "taskflow-df976ccb5-2-1",
+                        "uid": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca"
+                    }
+                ],
+                "resourceVersion": "7366",
+                "uid": "a0a9e664-01f0-4188-a2a0-f0b487e4e04f"
+            },
+            "spec": {
+                "backoffLimit": 0,
+                "completionMode": "NonIndexed",
+                "completions": 1,
+                "manualSelector": false,
+                "parallelism": 1,
+                "podReplacementPolicy": "TerminatingOrFailed",
+                "selector": {
+                    "matchLabels": {
+                        "batch.kubernetes.io/controller-uid": "a0a9e664-01f0-4188-a2a0-f0b487e4e04f"
+                    }
+                },
+                "suspend": false,
+                "template": {
+                    "metadata": {
+                        "labels": {
+                            "analysisrun.argoproj.io/uid": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca",
+                            "batch.kubernetes.io/controller-uid": "a0a9e664-01f0-4188-a2a0-f0b487e4e04f",
+                            "batch.kubernetes.io/job-name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1",
+                            "controller-uid": "a0a9e664-01f0-4188-a2a0-f0b487e4e04f",
+                            "job-name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "args": [
+                                    "run",
+                                    "/scripts/robustesse.js"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "TARGET",
+                                        "value": "http://taskflow-canary"
+                                    }
+                                ],
+                                "image": "grafana/k6:latest",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "k6",
+                                "resources": {
+                                    "limits": {
+                                        "memory": "256Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "64Mi"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/scripts",
+                                        "name": "scripts"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Never",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "k6-robustesse"
+                                },
+                                "name": "scripts"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "completionTime": "2026-10-08T08:59:18Z",
+                "conditions": [
+                    {
+                        "lastProbeTime": "2026-10-08T08:59:18Z",
+                        "lastTransitionTime": "2026-10-08T08:59:18Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "SuccessCriteriaMet"
+                    },
+                    {
+                        "lastProbeTime": "2026-10-08T08:59:18Z",
+                        "lastTransitionTime": "2026-10-08T08:59:18Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "Complete"
+                    }
+                ],
+                "ready": 0,
+                "startTime": "2026-10-08T08:58:12Z",
+                "succeeded": 1,
+                "terminating": 0,
+                "uncountedTerminatedPods": {}
+            }
+        },
+        {
+            "apiVersion": "batch/v1",
+            "kind": "Job",
+            "metadata": {
+                "annotations": {
+                    "analysisrun.argoproj.io/metric-name": "test-de-charge-k6",
+                    "analysisrun.argoproj.io/name": "taskflow-c6cf57bd6-3-1.1",
+                    "analysisrun.argoproj.io/namespace": "taskflow"
+                },
+                "creationTimestamp": "2026-10-08T09:04:10Z",
+                "generation": 1,
+                "labels": {
+                    "analysisrun.argoproj.io/uid": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf"
+                },
+                "name": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "AnalysisRun",
+                        "name": "taskflow-c6cf57bd6-3-1.1",
+                        "uid": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf"
+                    }
+                ],
+                "resourceVersion": "8475",
+                "uid": "b31fc911-c360-4764-ae69-3fe24382745d"
+            },
+            "spec": {
+                "backoffLimit": 0,
+                "completionMode": "NonIndexed",
+                "completions": 1,
+                "manualSelector": false,
+                "parallelism": 1,
+                "podReplacementPolicy": "TerminatingOrFailed",
+                "selector": {
+                    "matchLabels": {
+                        "batch.kubernetes.io/controller-uid": "b31fc911-c360-4764-ae69-3fe24382745d"
+                    }
+                },
+                "suspend": false,
+                "template": {
+                    "metadata": {
+                        "labels": {
+                            "analysisrun.argoproj.io/uid": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf",
+                            "batch.kubernetes.io/controller-uid": "b31fc911-c360-4764-ae69-3fe24382745d",
+                            "batch.kubernetes.io/job-name": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1",
+                            "controller-uid": "b31fc911-c360-4764-ae69-3fe24382745d",
+                            "job-name": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "args": [
+                                    "run",
+                                    "/scripts/robustesse.js"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "TARGET",
+                                        "value": "http://taskflow-canary"
+                                    },
+                                    {
+                                        "name": "EXPECTED_HASH",
+                                        "value": "c6cf57bd6"
+                                    }
+                                ],
+                                "image": "grafana/k6:latest",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "k6",
+                                "resources": {
+                                    "limits": {
+                                        "memory": "256Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "64Mi"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/scripts",
+                                        "name": "scripts"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Never",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "k6-robustesse"
+                                },
+                                "name": "scripts"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "completionTime": "2026-10-08T09:05:16Z",
+                "conditions": [
+                    {
+                        "lastProbeTime": "2026-10-08T09:05:16Z",
+                        "lastTransitionTime": "2026-10-08T09:05:16Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "SuccessCriteriaMet"
+                    },
+                    {
+                        "lastProbeTime": "2026-10-08T09:05:17Z",
+                        "lastTransitionTime": "2026-10-08T09:05:17Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "Complete"
+                    }
+                ],
+                "ready": 0,
+                "startTime": "2026-10-08T09:04:10Z",
+                "succeeded": 1,
+                "terminating": 0,
+                "uncountedTerminatedPods": {}
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

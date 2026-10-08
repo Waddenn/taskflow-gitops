@@ -13,12 +13,18 @@ Dépôt basé sur [celui de l’intervenant](https://github.com/9m7fjfpv9k-cyber
 |---|---|---|
 | Release déployée en **61 s** | **4 + 4 pods** : production et preview | **200/200 réponses HTTP 200** après revert |
 
-**État final du lab : TaskFlow 2.0.0, quatre pods prêts, Synced / Healthy** — configuration conforme à Git et application considérée saine par Argo CD.
+**État final du J2 : TaskFlow 2.0.0, quatre pods prêts, Synced / Healthy** — configuration conforme à Git et application considérée saine par Argo CD.
 
-**Suite J3 — partie A :** [journal et preuves](docs/J3-partie-A.md).
-Référence k6 sur 2.0.0 : 738 requêtes, 0 % d’erreurs, p95 de 4,23 ms.
-Le canary dispose désormais d’une analyse automatique à 25 %.
-Les parties B et C du J3 ne sont pas réalisées.
+**État actuel J3 : TaskFlow 2.2.0 à 100 %, quatre pods prêts, Synced / Healthy.**
+La 2.1.0 a été annulée automatiquement après correction d’un faux positif du test k6.
+Le rejeu mesure 27,71 % d’erreurs et un p95 de 308,43 ms ; la 2.2.0 passe avec
+0 % d’erreurs et un p95 de 7,09 ms.
+
+- [Partie A : étalon et analyse](docs/J3-partie-A.md)
+- [Partie B : journal, mesures et captures](docs/J3-partie-B.md)
+- [Postmortem 2.1.0 et correction du contrôle k6](docs/postmortem-2.1.0.md)
+
+La partie C n’est pas réalisée.
 
 ## Fonctionnement
 

@@ -1,0 +1,4159 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc",
+                "namespace": "taskflow",
+                "resourceVersion": "7962",
+                "uid": "e0d13ffd-3345-44e4-9ee0-2deddd10268e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:27Z",
+            "message": "Successfully assigned taskflow/d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:27Z",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc.18dc826ae81cd916",
+                "namespace": "taskflow",
+                "resourceVersion": "7969",
+                "uid": "aee85f46-ab10-4580-a1a0-37cb6daa8435"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6}",
+                "kind": "Pod",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc",
+                "namespace": "taskflow",
+                "resourceVersion": "7965",
+                "uid": "e0d13ffd-3345-44e4-9ee0-2deddd10268e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:27Z",
+            "message": "Container image \"grafana/k6:latest\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:27Z",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc.18dc826b05276e8f",
+                "namespace": "taskflow",
+                "resourceVersion": "7971",
+                "uid": "abe0716c-6529-427a-b1d6-37f76a89a368"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6}",
+                "kind": "Pod",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc",
+                "namespace": "taskflow",
+                "resourceVersion": "7965",
+                "uid": "e0d13ffd-3345-44e4-9ee0-2deddd10268e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:27Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:27Z",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc.18dc826b06f7cdd9",
+                "namespace": "taskflow",
+                "resourceVersion": "7973",
+                "uid": "351a2d1d-ae47-4cca-b405-de86d05a3629"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:28Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6}",
+                "kind": "Pod",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc",
+                "namespace": "taskflow",
+                "resourceVersion": "7965",
+                "uid": "e0d13ffd-3345-44e4-9ee0-2deddd10268e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:28Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:28Z",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc.18dc826b0b90e480",
+                "namespace": "taskflow",
+                "resourceVersion": "7975",
+                "uid": "d3e53811-4bad-4f75-93c6-e2167dd1cc4e"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:27Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1",
+                "namespace": "taskflow",
+                "resourceVersion": "7960",
+                "uid": "facc1bce-47e6-410c-abfa-54821693913c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:27Z",
+            "message": "Created pod: d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:27Z",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1.18dc826ae73dcf92",
+                "namespace": "taskflow",
+                "resourceVersion": "7964",
+                "uid": "4c509769-e67b-44eb-aa27-6aff077702c9"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:30Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1",
+                "namespace": "taskflow",
+                "resourceVersion": "8113",
+                "uid": "facc1bce-47e6-410c-abfa-54821693913c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:30Z",
+            "message": "Job has reached the specified backoff limit",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:30Z",
+                "name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1.18dc82799e962bb5",
+                "namespace": "taskflow",
+                "resourceVersion": "8116",
+                "uid": "a2fdcf84-5186-445d-b188-61fc322c013b"
+            },
+            "reason": "BackoffLimitExceeded",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv",
+                "namespace": "taskflow",
+                "resourceVersion": "7207",
+                "uid": "cb43224d-a74a-4199-8a3b-e2f10b72bf4a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:12Z",
+            "message": "Successfully assigned taskflow/e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:12Z",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv.18dc822f9a1d3ce5",
+                "namespace": "taskflow",
+                "resourceVersion": "7213",
+                "uid": "ed571be5-af95-4f53-96cc-31e6bf8305fe"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:13Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6}",
+                "kind": "Pod",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv",
+                "namespace": "taskflow",
+                "resourceVersion": "7211",
+                "uid": "cb43224d-a74a-4199-8a3b-e2f10b72bf4a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:13Z",
+            "message": "Container image \"grafana/k6:latest\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:13Z",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv.18dc822fb9953e99",
+                "namespace": "taskflow",
+                "resourceVersion": "7218",
+                "uid": "bbb6319c-bc30-424c-8855-c6b554b2baf2"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:13Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6}",
+                "kind": "Pod",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv",
+                "namespace": "taskflow",
+                "resourceVersion": "7211",
+                "uid": "cb43224d-a74a-4199-8a3b-e2f10b72bf4a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:13Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:13Z",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv.18dc822fc0d6ec10",
+                "namespace": "taskflow",
+                "resourceVersion": "7220",
+                "uid": "0a26b4bb-f933-4bcc-a75e-736ce73943d3"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:13Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6}",
+                "kind": "Pod",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv",
+                "namespace": "taskflow",
+                "resourceVersion": "7211",
+                "uid": "cb43224d-a74a-4199-8a3b-e2f10b72bf4a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:13Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:13Z",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv.18dc822fc4a9d855",
+                "namespace": "taskflow",
+                "resourceVersion": "7221",
+                "uid": "961f03c0-b0f6-479a-b28a-898c8e43f4b9"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:12Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1",
+                "namespace": "taskflow",
+                "resourceVersion": "7204",
+                "uid": "a0a9e664-01f0-4188-a2a0-f0b487e4e04f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:12Z",
+            "message": "Created pod: e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:12Z",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1.18dc822f9988930f",
+                "namespace": "taskflow",
+                "resourceVersion": "7210",
+                "uid": "5f009531-359f-4b6f-97a1-6e4312cf5501"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:18Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1",
+                "namespace": "taskflow",
+                "resourceVersion": "7364",
+                "uid": "a0a9e664-01f0-4188-a2a0-f0b487e4e04f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:18Z",
+            "message": "Job completed",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:18Z",
+                "name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1.18dc823ed201558c",
+                "namespace": "taskflow",
+                "resourceVersion": "7367",
+                "uid": "39ec17af-af0c-4299-ae1c-f04b658bbdd4"
+            },
+            "reason": "Completed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:09Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "k6-1791446768",
+                "namespace": "taskflow",
+                "resourceVersion": "1161",
+                "uid": "69b633e0-8ac0-4b28-8e2e-10be1948e2e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:09Z",
+            "message": "Successfully assigned taskflow/k6-1791446768 to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:09Z",
+                "name": "k6-1791446768.18dc7f584f97932b",
+                "namespace": "taskflow",
+                "resourceVersion": "1163",
+                "uid": "cbadce31-2d99-43a5-b840-0372fab9db05"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:09Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6-1791446768}",
+                "kind": "Pod",
+                "name": "k6-1791446768",
+                "namespace": "taskflow",
+                "resourceVersion": "1162",
+                "uid": "69b633e0-8ac0-4b28-8e2e-10be1948e2e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:09Z",
+            "message": "Pulling image \"grafana/k6:latest\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:09Z",
+                "name": "k6-1791446768.18dc7f58734acf53",
+                "namespace": "taskflow",
+                "resourceVersion": "1165",
+                "uid": "a8c257b7-bb47-4594-893f-ad1af821ddac"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:17Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6-1791446768}",
+                "kind": "Pod",
+                "name": "k6-1791446768",
+                "namespace": "taskflow",
+                "resourceVersion": "1162",
+                "uid": "69b633e0-8ac0-4b28-8e2e-10be1948e2e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:17Z",
+            "message": "Successfully pulled image \"grafana/k6:latest\" in 7.406s (7.406s including waiting). Image size: 36137595 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:17Z",
+                "name": "k6-1791446768.18dc7f5a2cc13352",
+                "namespace": "taskflow",
+                "resourceVersion": "1182",
+                "uid": "473e78aa-f9a5-4e6a-8df2-dd052159fb35"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:17Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6-1791446768}",
+                "kind": "Pod",
+                "name": "k6-1791446768",
+                "namespace": "taskflow",
+                "resourceVersion": "1162",
+                "uid": "69b633e0-8ac0-4b28-8e2e-10be1948e2e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:17Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:17Z",
+                "name": "k6-1791446768.18dc7f5a2fac50fb",
+                "namespace": "taskflow",
+                "resourceVersion": "1183",
+                "uid": "2aec7291-570e-4ffc-843b-56b99206dbb6"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:17Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{k6-1791446768}",
+                "kind": "Pod",
+                "name": "k6-1791446768",
+                "namespace": "taskflow",
+                "resourceVersion": "1162",
+                "uid": "69b633e0-8ac0-4b28-8e2e-10be1948e2e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:17Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:17Z",
+                "name": "k6-1791446768.18dc7f5a37e64d04",
+                "namespace": "taskflow",
+                "resourceVersion": "1184",
+                "uid": "fe5cbfb6-60d4-47ef-ae6c-d23e9b735aae"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "AnalysisRun",
+                "name": "taskflow-c6cf57bd6-3-1",
+                "namespace": "taskflow",
+                "resourceVersion": "8090",
+                "uid": "d831d915-64c5-4c72-b684-6c70c0e6af87"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Metric 'test-de-charge-k6' Completed. Result: Failed",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-c6cf57bd6-3-1.18dc8279b3882d78",
+                "namespace": "taskflow",
+                "resourceVersion": "8117",
+                "uid": "c83964b5-b59e-49fd-a747-283f8055e632"
+            },
+            "reason": "MetricFailed",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "AnalysisRun",
+                "name": "taskflow-c6cf57bd6-3-1",
+                "namespace": "taskflow",
+                "resourceVersion": "8090",
+                "uid": "d831d915-64c5-4c72-b684-6c70c0e6af87"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Analysis Completed. Result: Failed",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-c6cf57bd6-3-1.18dc8279b38a9961",
+                "namespace": "taskflow",
+                "resourceVersion": "8119",
+                "uid": "399a12fa-5823-4f2b-a166-26b277b50014"
+            },
+            "reason": "AnalysisRunFailed",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-c6nh7",
+                "namespace": "taskflow",
+                "resourceVersion": "1028",
+                "uid": "180ad4f0-9d6d-4bfc-bf4c-72e8dc9ef497"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Successfully assigned taskflow/taskflow-c6cf57bd6-c6nh7 to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow-c6cf57bd6-c6nh7.18dc7f5235cfae03",
+                "namespace": "taskflow",
+                "resourceVersion": "1042",
+                "uid": "793c1f11-dd35-4625-a9cb-da7986444050"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-c6nh7",
+                "namespace": "taskflow",
+                "resourceVersion": "1035",
+                "uid": "180ad4f0-9d6d-4bfc-bf4c-72e8dc9ef497"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:44Z",
+            "message": "Pulling image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:44Z",
+                "name": "taskflow-c6cf57bd6-c6nh7.18dc7f52971a6a10",
+                "namespace": "taskflow",
+                "resourceVersion": "1056",
+                "uid": "e6f7765c-d438-4f93-9205-32449a8bf495"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:00Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-c6nh7",
+                "namespace": "taskflow",
+                "resourceVersion": "1035",
+                "uid": "180ad4f0-9d6d-4bfc-bf4c-72e8dc9ef497"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:00Z",
+            "message": "Successfully pulled image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\" in 1.775s (15.684s including waiting). Image size: 49162308 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:00Z",
+                "name": "taskflow-c6cf57bd6-c6nh7.18dc7f563df5a108",
+                "namespace": "taskflow",
+                "resourceVersion": "1107",
+                "uid": "3af2f095-00b6-4b22-8eda-4d72bf0e09fa"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:00Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-c6nh7",
+                "namespace": "taskflow",
+                "resourceVersion": "1035",
+                "uid": "180ad4f0-9d6d-4bfc-bf4c-72e8dc9ef497"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:00Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:00Z",
+                "name": "taskflow-c6cf57bd6-c6nh7.18dc7f5641d8172d",
+                "namespace": "taskflow",
+                "resourceVersion": "1108",
+                "uid": "f9cf98a5-83cf-408f-9a26-1da106084fa2"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:00Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-c6nh7",
+                "namespace": "taskflow",
+                "resourceVersion": "1035",
+                "uid": "180ad4f0-9d6d-4bfc-bf4c-72e8dc9ef497"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:00Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:00Z",
+                "name": "taskflow-c6cf57bd6-c6nh7.18dc7f564738f684",
+                "namespace": "taskflow",
+                "resourceVersion": "1109",
+                "uid": "86251d30-89ef-4350-bb58-96a35486c55a"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:00Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-c6nh7",
+                "namespace": "taskflow",
+                "resourceVersion": "1035",
+                "uid": "180ad4f0-9d6d-4bfc-bf4c-72e8dc9ef497"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:00Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.16:8000/health\": dial tcp 10.244.0.16:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:00Z",
+                "name": "taskflow-c6cf57bd6-c6nh7.18dc7f56476c7712",
+                "namespace": "taskflow",
+                "resourceVersion": "1110",
+                "uid": "83828dfc-6bf7-4dfc-bfe5-9331c959d93c"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-c6nh7",
+                "namespace": "taskflow",
+                "resourceVersion": "1035",
+                "uid": "180ad4f0-9d6d-4bfc-bf4c-72e8dc9ef497"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Stopping container taskflow",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow-c6cf57bd6-c6nh7.18dc822e13ea82fa",
+                "namespace": "taskflow",
+                "resourceVersion": "7145",
+                "uid": "8d7c1262-8a69-4f19-b37f-00b41f119df9"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-cvqdp",
+                "namespace": "taskflow",
+                "resourceVersion": "1036",
+                "uid": "1873f86d-5bdb-463b-b9d4-a258f28c230c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:43Z",
+            "message": "Successfully assigned taskflow/taskflow-c6cf57bd6-cvqdp to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:43Z",
+                "name": "taskflow-c6cf57bd6-cvqdp.18dc7f523eb55fb8",
+                "namespace": "taskflow",
+                "resourceVersion": "1043",
+                "uid": "9d253178-9b87-4728-ba62-ccf6313dc8bb"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-cvqdp",
+                "namespace": "taskflow",
+                "resourceVersion": "1040",
+                "uid": "1873f86d-5bdb-463b-b9d4-a258f28c230c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:44Z",
+            "message": "Pulling image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:44Z",
+                "name": "taskflow-c6cf57bd6-cvqdp.18dc7f5299d557ab",
+                "namespace": "taskflow",
+                "resourceVersion": "1058",
+                "uid": "fea21e8e-ce67-43d7-a224-0168ace7484a"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:01Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-cvqdp",
+                "namespace": "taskflow",
+                "resourceVersion": "1040",
+                "uid": "1873f86d-5bdb-463b-b9d4-a258f28c230c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:01Z",
+            "message": "Successfully pulled image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\" in 835ms (16.473s including waiting). Image size: 49162308 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:01Z",
+                "name": "taskflow-c6cf57bd6-cvqdp.18dc7f566fba6a65",
+                "namespace": "taskflow",
+                "resourceVersion": "1114",
+                "uid": "82a5dc31-72e5-43e6-8b7d-82d8b101bab1"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:01Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-cvqdp",
+                "namespace": "taskflow",
+                "resourceVersion": "1040",
+                "uid": "1873f86d-5bdb-463b-b9d4-a258f28c230c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:01Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:01Z",
+                "name": "taskflow-c6cf57bd6-cvqdp.18dc7f5674f630ee",
+                "namespace": "taskflow",
+                "resourceVersion": "1115",
+                "uid": "e4c8fb5f-e208-41da-a0c8-2199e7afa9e2"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:01Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-cvqdp",
+                "namespace": "taskflow",
+                "resourceVersion": "1040",
+                "uid": "1873f86d-5bdb-463b-b9d4-a258f28c230c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:01Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:01Z",
+                "name": "taskflow-c6cf57bd6-cvqdp.18dc7f567871477e",
+                "namespace": "taskflow",
+                "resourceVersion": "1121",
+                "uid": "c8a1d12b-532d-49de-8024-64c71f92661b"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:06:01Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-cvqdp",
+                "namespace": "taskflow",
+                "resourceVersion": "1040",
+                "uid": "1873f86d-5bdb-463b-b9d4-a258f28c230c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:06:01Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.17:8000/health\": dial tcp 10.244.0.17:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:06:01Z",
+                "name": "taskflow-c6cf57bd6-cvqdp.18dc7f56788cfb2e",
+                "namespace": "taskflow",
+                "resourceVersion": "1122",
+                "uid": "5ef96f30-bc45-42e2-b734-9ea4edf57d35"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-cvqdp",
+                "namespace": "taskflow",
+                "resourceVersion": "1040",
+                "uid": "1873f86d-5bdb-463b-b9d4-a258f28c230c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Stopping container taskflow",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow-c6cf57bd6-cvqdp.18dc8240f22bb4ee",
+                "namespace": "taskflow",
+                "resourceVersion": "7402",
+                "uid": "b3dcf236-f0db-415e-a9e4-dceaaeafd83c"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-hwqpf",
+                "namespace": "taskflow",
+                "resourceVersion": "1024",
+                "uid": "6ec9dcc2-7e97-45d3-b678-265461ad2ebe"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Successfully assigned taskflow/taskflow-c6cf57bd6-hwqpf to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow-c6cf57bd6-hwqpf.18dc7f523049c807",
+                "namespace": "taskflow",
+                "resourceVersion": "1030",
+                "uid": "000530e0-4273-4081-aca7-a5bcd6af6e23"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-hwqpf",
+                "namespace": "taskflow",
+                "resourceVersion": "1025",
+                "uid": "6ec9dcc2-7e97-45d3-b678-265461ad2ebe"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:44Z",
+            "message": "Pulling image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:44Z",
+                "name": "taskflow-c6cf57bd6-hwqpf.18dc7f5289e188e6",
+                "namespace": "taskflow",
+                "resourceVersion": "1052",
+                "uid": "5e833393-d5c6-486f-8235-99211a5ba4dd"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:57Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-hwqpf",
+                "namespace": "taskflow",
+                "resourceVersion": "1025",
+                "uid": "6ec9dcc2-7e97-45d3-b678-265461ad2ebe"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:57Z",
+            "message": "Successfully pulled image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\" in 13.326s (13.326s including waiting). Image size: 49162308 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:57Z",
+                "name": "taskflow-c6cf57bd6-hwqpf.18dc7f55a4342761",
+                "namespace": "taskflow",
+                "resourceVersion": "1082",
+                "uid": "4c530cc4-5694-4103-bd08-b9bc1692d787"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:57Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-hwqpf",
+                "namespace": "taskflow",
+                "resourceVersion": "1025",
+                "uid": "6ec9dcc2-7e97-45d3-b678-265461ad2ebe"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:57Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:57Z",
+                "name": "taskflow-c6cf57bd6-hwqpf.18dc7f55b839e623",
+                "namespace": "taskflow",
+                "resourceVersion": "1086",
+                "uid": "41f0c07c-87a2-4b56-9094-4a3311daffb2"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-hwqpf",
+                "namespace": "taskflow",
+                "resourceVersion": "1025",
+                "uid": "6ec9dcc2-7e97-45d3-b678-265461ad2ebe"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:58Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:58Z",
+                "name": "taskflow-c6cf57bd6-hwqpf.18dc7f55c0cd8f84",
+                "namespace": "taskflow",
+                "resourceVersion": "1087",
+                "uid": "26079647-54b2-4c5e-a01c-96c8259a69e9"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-hwqpf",
+                "namespace": "taskflow",
+                "resourceVersion": "1025",
+                "uid": "6ec9dcc2-7e97-45d3-b678-265461ad2ebe"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:59Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.14:8000/health\": dial tcp 10.244.0.14:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:58Z",
+                "name": "taskflow-c6cf57bd6-hwqpf.18dc7f55c0f136a5",
+                "namespace": "taskflow",
+                "resourceVersion": "1103",
+                "uid": "236da14a-96a5-4a96-aad4-d33d904a11d9"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-hwqpf",
+                "namespace": "taskflow",
+                "resourceVersion": "1025",
+                "uid": "6ec9dcc2-7e97-45d3-b678-265461ad2ebe"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Stopping container taskflow",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow-c6cf57bd6-hwqpf.18dc8249494dd74e",
+                "namespace": "taskflow",
+                "resourceVersion": "7522",
+                "uid": "e498bc19-7c77-4c9f-ac30-c9771d00a919"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-n8vbp",
+                "namespace": "taskflow",
+                "resourceVersion": "1029",
+                "uid": "a01710cb-8bec-487a-9d0b-09fc1d226be7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Successfully assigned taskflow/taskflow-c6cf57bd6-n8vbp to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow-c6cf57bd6-n8vbp.18dc7f5235cf7ee4",
+                "namespace": "taskflow",
+                "resourceVersion": "1037",
+                "uid": "014434cb-d67e-409a-8cf5-d451b95f36a5"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-n8vbp",
+                "namespace": "taskflow",
+                "resourceVersion": "1034",
+                "uid": "a01710cb-8bec-487a-9d0b-09fc1d226be7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:44Z",
+            "message": "Pulling image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:44Z",
+                "name": "taskflow-c6cf57bd6-n8vbp.18dc7f5294df2334",
+                "namespace": "taskflow",
+                "resourceVersion": "1054",
+                "uid": "d638998b-a4d1-432d-8a5e-27bfc7bd798f"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-n8vbp",
+                "namespace": "taskflow",
+                "resourceVersion": "1034",
+                "uid": "a01710cb-8bec-487a-9d0b-09fc1d226be7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:58Z",
+            "message": "Successfully pulled image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\" in 804ms (13.946s including waiting). Image size: 49162308 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:58Z",
+                "name": "taskflow-c6cf57bd6-n8vbp.18dc7f55d42111d2",
+                "namespace": "taskflow",
+                "resourceVersion": "1094",
+                "uid": "7c076d70-6d56-41d5-ba51-99d67835ccd2"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-n8vbp",
+                "namespace": "taskflow",
+                "resourceVersion": "1034",
+                "uid": "a01710cb-8bec-487a-9d0b-09fc1d226be7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:58Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:58Z",
+                "name": "taskflow-c6cf57bd6-n8vbp.18dc7f55dec2fd71",
+                "namespace": "taskflow",
+                "resourceVersion": "1095",
+                "uid": "c64ac86e-dc8a-4c16-b874-e794423ccbe6"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-n8vbp",
+                "namespace": "taskflow",
+                "resourceVersion": "1034",
+                "uid": "a01710cb-8bec-487a-9d0b-09fc1d226be7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:58Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:58Z",
+                "name": "taskflow-c6cf57bd6-n8vbp.18dc7f55e590ae99",
+                "namespace": "taskflow",
+                "resourceVersion": "1096",
+                "uid": "c9ea6352-c90f-4ef6-819b-415fa358fbe4"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-n8vbp",
+                "namespace": "taskflow",
+                "resourceVersion": "1034",
+                "uid": "a01710cb-8bec-487a-9d0b-09fc1d226be7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.15:8000/health\": dial tcp 10.244.0.15:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:58Z",
+                "name": "taskflow-c6cf57bd6-n8vbp.18dc7f55e5c51396",
+                "namespace": "taskflow",
+                "resourceVersion": "7657",
+                "uid": "354cc3c7-98dc-46e3-b649-2f226d68a756"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-n8vbp",
+                "namespace": "taskflow",
+                "resourceVersion": "1034",
+                "uid": "a01710cb-8bec-487a-9d0b-09fc1d226be7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Stopping container taskflow",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow-c6cf57bd6-n8vbp.18dc8251ab0c7bd9",
+                "namespace": "taskflow",
+                "resourceVersion": "7648",
+                "uid": "e205d19a-7900-4f44-9a3c-0539217f9abe"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:21Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-z8kfr",
+                "namespace": "taskflow",
+                "resourceVersion": "7911",
+                "uid": "186dcf4d-ef88-42c8-93f8-e9a44c170525"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:21Z",
+            "message": "Successfully assigned taskflow/taskflow-c6cf57bd6-z8kfr to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:21Z",
+                "name": "taskflow-c6cf57bd6-z8kfr.18dc826992058381",
+                "namespace": "taskflow",
+                "resourceVersion": "7917",
+                "uid": "abf3a97f-3c4f-45a3-9d33-e403cf83d744"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:22Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-z8kfr",
+                "namespace": "taskflow",
+                "resourceVersion": "7915",
+                "uid": "186dcf4d-ef88-42c8-93f8-e9a44c170525"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:22Z",
+            "message": "Container image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:22Z",
+                "name": "taskflow-c6cf57bd6-z8kfr.18dc8269ad4d76a6",
+                "namespace": "taskflow",
+                "resourceVersion": "7928",
+                "uid": "37b33adc-b0c7-47c2-8d25-59be995b6505"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:22Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-z8kfr",
+                "namespace": "taskflow",
+                "resourceVersion": "7915",
+                "uid": "186dcf4d-ef88-42c8-93f8-e9a44c170525"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:22Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:22Z",
+                "name": "taskflow-c6cf57bd6-z8kfr.18dc8269af098b78",
+                "namespace": "taskflow",
+                "resourceVersion": "7930",
+                "uid": "ce9c6693-4c24-43c9-b3dd-b401f99b80f0"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:22Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-z8kfr",
+                "namespace": "taskflow",
+                "resourceVersion": "7915",
+                "uid": "186dcf4d-ef88-42c8-93f8-e9a44c170525"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:22Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:22Z",
+                "name": "taskflow-c6cf57bd6-z8kfr.18dc8269b3b77769",
+                "namespace": "taskflow",
+                "resourceVersion": "7931",
+                "uid": "c91d9933-295c-4c20-b0b8-d457a5df7581"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:22Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-z8kfr",
+                "namespace": "taskflow",
+                "resourceVersion": "7915",
+                "uid": "186dcf4d-ef88-42c8-93f8-e9a44c170525"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:22Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.24:8000/health\": dial tcp 10.244.0.24:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:22Z",
+                "name": "taskflow-c6cf57bd6-z8kfr.18dc8269b3df391a",
+                "namespace": "taskflow",
+                "resourceVersion": "7936",
+                "uid": "efab3eff-7d9d-411d-be89-48eb68b8544f"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-c6cf57bd6-z8kfr",
+                "namespace": "taskflow",
+                "resourceVersion": "7915",
+                "uid": "186dcf4d-ef88-42c8-93f8-e9a44c170525"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Stopping container taskflow",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-c6cf57bd6-z8kfr.18dc8279b8a85dbb",
+                "namespace": "taskflow",
+                "resourceVersion": "8142",
+                "uid": "a1b73b22-73eb-489b-a41e-5c5b5b209bc1"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "1020",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Created pod: taskflow-c6cf57bd6-hwqpf",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow-c6cf57bd6.18dc7f522ea27f39",
+                "namespace": "taskflow",
+                "resourceVersion": "1026",
+                "uid": "2122485d-1c2c-45a3-8b9f-ddf71e353558"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "1020",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Created pod: taskflow-c6cf57bd6-n8vbp",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow-c6cf57bd6.18dc7f523209dbe2",
+                "namespace": "taskflow",
+                "resourceVersion": "1033",
+                "uid": "cffdd726-e93f-4818-a79b-13e91a121c39"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "1020",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Created pod: taskflow-c6cf57bd6-c6nh7",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow-c6cf57bd6.18dc7f523209f30d",
+                "namespace": "taskflow",
+                "resourceVersion": "1038",
+                "uid": "f9ad6115-8c7c-4348-864e-6f00c641e7d1"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "1020",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Created pod: taskflow-c6cf57bd6-cvqdp",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:43Z",
+                "name": "taskflow-c6cf57bd6.18dc7f5235c68547",
+                "namespace": "taskflow",
+                "resourceVersion": "1044",
+                "uid": "be6f1f19-6765-4be8-9a00-55761df6e49b"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "7137",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Deleted pod: taskflow-c6cf57bd6-c6nh7",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow-c6cf57bd6.18dc822e13d4dcb5",
+                "namespace": "taskflow",
+                "resourceVersion": "7143",
+                "uid": "673eb6da-ab09-4569-9b61-95baa5b2545e"
+            },
+            "reason": "SuccessfulDelete",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "7392",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Deleted pod: taskflow-c6cf57bd6-cvqdp",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow-c6cf57bd6.18dc8240f1fec9e8",
+                "namespace": "taskflow",
+                "resourceVersion": "7397",
+                "uid": "3ce9d71b-17b5-42f5-87fb-8402402bb39d"
+            },
+            "reason": "SuccessfulDelete",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "7514",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Deleted pod: taskflow-c6cf57bd6-hwqpf",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow-c6cf57bd6.18dc82494921dfb4",
+                "namespace": "taskflow",
+                "resourceVersion": "7518",
+                "uid": "cbb340d0-1edc-4706-bacd-aa0de67b91c0"
+            },
+            "reason": "SuccessfulDelete",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "7640",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Deleted pod: taskflow-c6cf57bd6-n8vbp",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow-c6cf57bd6.18dc8251aaf40b00",
+                "namespace": "taskflow",
+                "resourceVersion": "7644",
+                "uid": "314a95d0-f913-4182-a366-ed49e752c2ca"
+            },
+            "reason": "SuccessfulDelete",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:21Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "7902",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:21Z",
+            "message": "Created pod: taskflow-c6cf57bd6-z8kfr",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:21Z",
+                "name": "taskflow-c6cf57bd6.18dc826991acf28d",
+                "namespace": "taskflow",
+                "resourceVersion": "7914",
+                "uid": "d1aecb49-31a8-402f-a4ea-0635bb219e91"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-c6cf57bd6",
+                "namespace": "taskflow",
+                "resourceVersion": "8133",
+                "uid": "2adf7c90-3181-40c2-a89d-6eaeb197ed34"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Deleted pod: taskflow-c6cf57bd6-z8kfr",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-c6cf57bd6.18dc8279b88f477f",
+                "namespace": "taskflow",
+                "resourceVersion": "8138",
+                "uid": "891d8074-7d40-43f6-ad6d-f3fad9ce51db"
+            },
+            "reason": "SuccessfulDelete",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "AnalysisRun",
+                "name": "taskflow-df976ccb5-2-1",
+                "namespace": "taskflow",
+                "resourceVersion": "7358",
+                "uid": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Metric 'test-de-charge-k6' Completed. Result: Successful",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow-df976ccb5-2-1.18dc8240e3fd9cf6",
+                "namespace": "taskflow",
+                "resourceVersion": "7384",
+                "uid": "6b11237d-b1f1-4952-ab60-93724b9e9fb6"
+            },
+            "reason": "MetricSuccessful",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "AnalysisRun",
+                "name": "taskflow-df976ccb5-2-1",
+                "namespace": "taskflow",
+                "resourceVersion": "7358",
+                "uid": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Analysis Completed. Result: Successful",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow-df976ccb5-2-1.18dc8240e400cbf6",
+                "namespace": "taskflow",
+                "resourceVersion": "7386",
+                "uid": "bda2ff7c-9cd4-4cdc-9f1b-7ba4a1ae694b"
+            },
+            "reason": "AnalysisRunSuccessful",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-6dsnh",
+                "namespace": "taskflow",
+                "resourceVersion": "7403",
+                "uid": "bdc17e51-6442-4b08-b92f-4ca82c0d4e8b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Successfully assigned taskflow/taskflow-df976ccb5-6dsnh to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow-df976ccb5-6dsnh.18dc8240f3aca885",
+                "namespace": "taskflow",
+                "resourceVersion": "7409",
+                "uid": "61d2b46d-e550-4b8b-a62d-40aa6d10ade7"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:28Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-6dsnh",
+                "namespace": "taskflow",
+                "resourceVersion": "7406",
+                "uid": "bdc17e51-6442-4b08-b92f-4ca82c0d4e8b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:28Z",
+            "message": "Container image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:28Z",
+                "name": "taskflow-df976ccb5-6dsnh.18dc8241380a5968",
+                "namespace": "taskflow",
+                "resourceVersion": "7417",
+                "uid": "94d6f05c-ba40-4797-81b8-0bcfbd0ed603"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:28Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-6dsnh",
+                "namespace": "taskflow",
+                "resourceVersion": "7406",
+                "uid": "bdc17e51-6442-4b08-b92f-4ca82c0d4e8b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:28Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:28Z",
+                "name": "taskflow-df976ccb5-6dsnh.18dc82413f47fe83",
+                "namespace": "taskflow",
+                "resourceVersion": "7421",
+                "uid": "533293b7-22ee-4d4e-b11f-3e62a355b8dd"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:28Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-6dsnh",
+                "namespace": "taskflow",
+                "resourceVersion": "7406",
+                "uid": "bdc17e51-6442-4b08-b92f-4ca82c0d4e8b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:28Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:28Z",
+                "name": "taskflow-df976ccb5-6dsnh.18dc824149d2b13f",
+                "namespace": "taskflow",
+                "resourceVersion": "7422",
+                "uid": "9b09b869-4825-4df2-ba05-4f0f1f27f622"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:28Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-6dsnh",
+                "namespace": "taskflow",
+                "resourceVersion": "7406",
+                "uid": "bdc17e51-6442-4b08-b92f-4ca82c0d4e8b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:28Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.21:8000/health\": dial tcp 10.244.0.21:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:28Z",
+                "name": "taskflow-df976ccb5-6dsnh.18dc82414a060bc4",
+                "namespace": "taskflow",
+                "resourceVersion": "7429",
+                "uid": "33ad2cff-72f6-488c-a81e-ea868d9d116a"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-bc77w",
+                "namespace": "taskflow",
+                "resourceVersion": "7652",
+                "uid": "812967b5-a4a7-4996-bc25-e5942f055994"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Successfully assigned taskflow/taskflow-df976ccb5-bc77w to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow-df976ccb5-bc77w.18dc8251ac6fbfb0",
+                "namespace": "taskflow",
+                "resourceVersion": "7658",
+                "uid": "57cd98c9-81b5-4289-8c2b-dc8765b0b363"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-bc77w",
+                "namespace": "taskflow",
+                "resourceVersion": "7654",
+                "uid": "812967b5-a4a7-4996-bc25-e5942f055994"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Container image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow-df976ccb5-bc77w.18dc8251cddb44cb",
+                "namespace": "taskflow",
+                "resourceVersion": "7667",
+                "uid": "bd246e5f-00a2-4fc3-bf6c-c66acfd93ec7"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-bc77w",
+                "namespace": "taskflow",
+                "resourceVersion": "7654",
+                "uid": "812967b5-a4a7-4996-bc25-e5942f055994"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow-df976ccb5-bc77w.18dc8251cfa11f52",
+                "namespace": "taskflow",
+                "resourceVersion": "7669",
+                "uid": "1742b2af-2959-433b-aabc-7e4e662af0ec"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-bc77w",
+                "namespace": "taskflow",
+                "resourceVersion": "7654",
+                "uid": "812967b5-a4a7-4996-bc25-e5942f055994"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow-df976ccb5-bc77w.18dc8251d3e7c7ba",
+                "namespace": "taskflow",
+                "resourceVersion": "7670",
+                "uid": "ef19ccbb-3d76-4bf0-b127-4a5644113f68"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-bc77w",
+                "namespace": "taskflow",
+                "resourceVersion": "7654",
+                "uid": "812967b5-a4a7-4996-bc25-e5942f055994"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:40Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.23:8000/health\": dial tcp 10.244.0.23:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow-df976ccb5-bc77w.18dc8251d40a8ef7",
+                "namespace": "taskflow",
+                "resourceVersion": "7677",
+                "uid": "7ab084f8-79d8-4111-95a2-77bb6d8b5069"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:21Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-bc77w",
+                "namespace": "taskflow",
+                "resourceVersion": "7654",
+                "uid": "812967b5-a4a7-4996-bc25-e5942f055994"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:21Z",
+            "message": "Stopping container taskflow",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:21Z",
+                "name": "taskflow-df976ccb5-bc77w.18dc826991237b98",
+                "namespace": "taskflow",
+                "resourceVersion": "7910",
+                "uid": "a53c7b4e-e4f2-495b-8c5b-e1e15a80343e"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-dgvv6",
+                "namespace": "taskflow",
+                "resourceVersion": "8128",
+                "uid": "0a96044b-ebe0-482a-994d-0b71cd7d24b5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Successfully assigned taskflow/taskflow-df976ccb5-dgvv6 to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-df976ccb5-dgvv6.18dc8279b80e23f2",
+                "namespace": "taskflow",
+                "resourceVersion": "8134",
+                "uid": "9b12cc77-b74a-421f-a66c-59d9f0624c7a"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-dgvv6",
+                "namespace": "taskflow",
+                "resourceVersion": "8131",
+                "uid": "0a96044b-ebe0-482a-994d-0b71cd7d24b5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Container image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-df976ccb5-dgvv6.18dc8279da8d76f8",
+                "namespace": "taskflow",
+                "resourceVersion": "8152",
+                "uid": "81c12211-ab52-4ec8-be6b-c4de45393d71"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-dgvv6",
+                "namespace": "taskflow",
+                "resourceVersion": "8131",
+                "uid": "0a96044b-ebe0-482a-994d-0b71cd7d24b5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-df976ccb5-dgvv6.18dc8279dcca6343",
+                "namespace": "taskflow",
+                "resourceVersion": "8154",
+                "uid": "4d33a336-defe-4343-b55a-d794b5d362c8"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-dgvv6",
+                "namespace": "taskflow",
+                "resourceVersion": "8131",
+                "uid": "0a96044b-ebe0-482a-994d-0b71cd7d24b5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-df976ccb5-dgvv6.18dc8279e20f508e",
+                "namespace": "taskflow",
+                "resourceVersion": "8157",
+                "uid": "b171755f-de8a-4236-be1d-b3cdb0a2ec6d"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-dgvv6",
+                "namespace": "taskflow",
+                "resourceVersion": "8131",
+                "uid": "0a96044b-ebe0-482a-994d-0b71cd7d24b5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:32Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.26:8000/health\": dial tcp 10.244.0.26:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-df976ccb5-dgvv6.18dc8279e23b86e4",
+                "namespace": "taskflow",
+                "resourceVersion": "8168",
+                "uid": "ed2776d9-b4f3-452d-a1a6-ab38ab441aa4"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-lfqtf",
+                "namespace": "taskflow",
+                "resourceVersion": "7147",
+                "uid": "d93a5860-48b5-40bc-8fea-cde255dd4b23"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Successfully assigned taskflow/taskflow-df976ccb5-lfqtf to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow-df976ccb5-lfqtf.18dc822e150d181a",
+                "namespace": "taskflow",
+                "resourceVersion": "7158",
+                "uid": "a086ddc4-1db9-4bd4-9ed0-daa3a102121e"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-lfqtf",
+                "namespace": "taskflow",
+                "resourceVersion": "7156",
+                "uid": "d93a5860-48b5-40bc-8fea-cde255dd4b23"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Container image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow-df976ccb5-lfqtf.18dc822e3a106b88",
+                "namespace": "taskflow",
+                "resourceVersion": "7163",
+                "uid": "b72f6d48-6510-413d-b4e8-1cd791654a7c"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-lfqtf",
+                "namespace": "taskflow",
+                "resourceVersion": "7156",
+                "uid": "d93a5860-48b5-40bc-8fea-cde255dd4b23"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow-df976ccb5-lfqtf.18dc822e3f24c548",
+                "namespace": "taskflow",
+                "resourceVersion": "7169",
+                "uid": "565837d8-f363-4181-b989-911d7641eed5"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:07Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-lfqtf",
+                "namespace": "taskflow",
+                "resourceVersion": "7156",
+                "uid": "d93a5860-48b5-40bc-8fea-cde255dd4b23"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:07Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:07Z",
+                "name": "taskflow-df976ccb5-lfqtf.18dc822e460fe3af",
+                "namespace": "taskflow",
+                "resourceVersion": "7170",
+                "uid": "e8c44e69-59e4-4858-853b-d21d86d4c3a7"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:07Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-lfqtf",
+                "namespace": "taskflow",
+                "resourceVersion": "7156",
+                "uid": "d93a5860-48b5-40bc-8fea-cde255dd4b23"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:07Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.19:8000/health\": dial tcp 10.244.0.19:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:07Z",
+                "name": "taskflow-df976ccb5-lfqtf.18dc822e464af5e3",
+                "namespace": "taskflow",
+                "resourceVersion": "7175",
+                "uid": "fe31ad20-6806-44b5-84c9-9edd42f54aa1"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-xmxxk",
+                "namespace": "taskflow",
+                "resourceVersion": "7524",
+                "uid": "a19b64cd-e1de-4520-8bae-5f984828a65b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Successfully assigned taskflow/taskflow-df976ccb5-xmxxk to cicd-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow-df976ccb5-xmxxk.18dc82494aafa4bc",
+                "namespace": "taskflow",
+                "resourceVersion": "7530",
+                "uid": "ea1fa2b9-4180-4157-8f34-79dddf17f207"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-xmxxk",
+                "namespace": "taskflow",
+                "resourceVersion": "7528",
+                "uid": "a19b64cd-e1de-4520-8bae-5f984828a65b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Container image \"ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow-df976ccb5-xmxxk.18dc82496efd5bef",
+                "namespace": "taskflow",
+                "resourceVersion": "7541",
+                "uid": "76cd69cd-d1bf-429f-ba4e-00be3eeb00d0"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-xmxxk",
+                "namespace": "taskflow",
+                "resourceVersion": "7528",
+                "uid": "a19b64cd-e1de-4520-8bae-5f984828a65b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow-df976ccb5-xmxxk.18dc824971bfcba4",
+                "namespace": "taskflow",
+                "resourceVersion": "7543",
+                "uid": "aa5b1e74-118d-4d6f-a22a-839347d191d0"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-xmxxk",
+                "namespace": "taskflow",
+                "resourceVersion": "7528",
+                "uid": "a19b64cd-e1de-4520-8bae-5f984828a65b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow-df976ccb5-xmxxk.18dc824978d653c7",
+                "namespace": "taskflow",
+                "resourceVersion": "7546",
+                "uid": "c4abbcbf-1d9d-4e95-b516-de800a25dc74"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{taskflow}",
+                "kind": "Pod",
+                "name": "taskflow-df976ccb5-xmxxk",
+                "namespace": "taskflow",
+                "resourceVersion": "7528",
+                "uid": "a19b64cd-e1de-4520-8bae-5f984828a65b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.22:8000/health\": dial tcp 10.244.0.22:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow-df976ccb5-xmxxk.18dc82497902eba4",
+                "namespace": "taskflow",
+                "resourceVersion": "7553",
+                "uid": "34f834c1-876c-404d-8220-803b702c985b"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "cicd-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "cicd-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-df976ccb5",
+                "namespace": "taskflow",
+                "resourceVersion": "7141",
+                "uid": "4fadb747-2641-44d0-ad89-c934db7d04b6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Created pod: taskflow-df976ccb5-lfqtf",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow-df976ccb5.18dc822e148a21d2",
+                "namespace": "taskflow",
+                "resourceVersion": "7152",
+                "uid": "54f2f0b9-7868-4b9e-8f2c-7fec118817e7"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-df976ccb5",
+                "namespace": "taskflow",
+                "resourceVersion": "7395",
+                "uid": "4fadb747-2641-44d0-ad89-c934db7d04b6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Created pod: taskflow-df976ccb5-6dsnh",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow-df976ccb5.18dc8240f2f1ebcd",
+                "namespace": "taskflow",
+                "resourceVersion": "7407",
+                "uid": "c087e911-8f7f-4459-84b3-60e07c3b238f"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-df976ccb5",
+                "namespace": "taskflow",
+                "resourceVersion": "7517",
+                "uid": "4fadb747-2641-44d0-ad89-c934db7d04b6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Created pod: taskflow-df976ccb5-xmxxk",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow-df976ccb5.18dc82494a313f01",
+                "namespace": "taskflow",
+                "resourceVersion": "7527",
+                "uid": "729f762e-0fd4-49a0-95c0-56cd06a1d960"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-df976ccb5",
+                "namespace": "taskflow",
+                "resourceVersion": "7643",
+                "uid": "4fadb747-2641-44d0-ad89-c934db7d04b6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Created pod: taskflow-df976ccb5-bc77w",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow-df976ccb5.18dc8251abef611c",
+                "namespace": "taskflow",
+                "resourceVersion": "7653",
+                "uid": "3a0ed4f9-e125-456e-a812-ee7f2dce4366"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:02:21Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-df976ccb5",
+                "namespace": "taskflow",
+                "resourceVersion": "7899",
+                "uid": "4fadb747-2641-44d0-ad89-c934db7d04b6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:02:21Z",
+            "message": "Deleted pod: taskflow-df976ccb5-bc77w",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:02:21Z",
+                "name": "taskflow-df976ccb5.18dc826990ecc3db",
+                "namespace": "taskflow",
+                "resourceVersion": "7904",
+                "uid": "2bf5e0e5-a242-472c-abab-049c04bde75c"
+            },
+            "reason": "SuccessfulDelete",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "ReplicaSet",
+                "name": "taskflow-df976ccb5",
+                "namespace": "taskflow",
+                "resourceVersion": "8126",
+                "uid": "4fadb747-2641-44d0-ad89-c934db7d04b6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Created pod: taskflow-df976ccb5-dgvv6",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow-df976ccb5.18dc8279b7312461",
+                "namespace": "taskflow",
+                "resourceVersion": "8130",
+                "uid": "6a5f00f9-5172-4c85-9177-9edc119d4309"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "replicaset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "1003",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Rollout resource added to informer: taskflow/taskflow",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow.18dc7f521e24f79c",
+                "namespace": "taskflow",
+                "resourceVersion": "1005",
+                "uid": "72bfaa38-89ca-43c3-8dd0-722fa8214a51"
+            },
+            "reason": "RolloutAddedToInformer",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "1009",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Rollout updated to revision 1",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow.18dc7f5225676f7c",
+                "namespace": "taskflow",
+                "resourceVersion": "1012",
+                "uid": "e33e7aef-0c79-4959-9793-603d1c75cf2d"
+            },
+            "reason": "RolloutUpdated",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "1009",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Created ReplicaSet taskflow-c6cf57bd6 (revision 1)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow.18dc7f5225696d44",
+                "namespace": "taskflow",
+                "resourceVersion": "1015",
+                "uid": "db7dd83e-9ec5-4886-8c3f-7df1eae790da"
+            },
+            "reason": "NewReplicaSetCreated",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "1014",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Rollout not completed, started update to revision 1 (c6cf57bd6)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow.18dc7f52274d3f6b",
+                "namespace": "taskflow",
+                "resourceVersion": "1018",
+                "uid": "4a7a3066-1491-4240-b514-48f98a948ec1"
+            },
+            "reason": "RolloutNotCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "1019",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Scaled up ReplicaSet taskflow-c6cf57bd6 (revision 1) from 0 to 4",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow.18dc7f5229106909",
+                "namespace": "taskflow",
+                "resourceVersion": "1022",
+                "uid": "9bfb60a8-c49f-4764-b086-4360d179d0cc"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:05:42Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "1019",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:05:42Z",
+            "message": "Rollout completed update to revision 1 (c6cf57bd6): Initial deploy",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:05:42Z",
+                "name": "taskflow.18dc7f522916350e",
+                "namespace": "taskflow",
+                "resourceVersion": "1027",
+                "uid": "a174a022-84b8-4024-acde-113afa2b5b60"
+            },
+            "reason": "RolloutCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:08:15Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "1429",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:08:15Z",
+            "message": "Rollback to stable ReplicaSets",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:08:15Z",
+                "name": "taskflow.18dc7f75be1779e5",
+                "namespace": "taskflow",
+                "resourceVersion": "1431",
+                "uid": "5f11d004-7ebe-436b-987e-2b01dcc4a6a2"
+            },
+            "reason": "SkipSteps",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:08:15Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "1432",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:08:15Z",
+            "message": "Switched selector for service 'taskflow-canary' from '' to 'c6cf57bd6'",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:08:15Z",
+                "name": "taskflow.18dc7f75bf8a9770",
+                "namespace": "taskflow",
+                "resourceVersion": "1437",
+                "uid": "d1e8c1b0-be28-47be-bf99-3d83e85a20b6"
+            },
+            "reason": "SwitchService",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7128",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Rollout updated to revision 2",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow.18dc822e1197cf9f",
+                "namespace": "taskflow",
+                "resourceVersion": "7131",
+                "uid": "c0a39ba8-5e18-4442-8182-a55898dda68b"
+            },
+            "reason": "RolloutUpdated",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7128",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Created ReplicaSet taskflow-df976ccb5 (revision 2)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow.18dc822e119b4bfe",
+                "namespace": "taskflow",
+                "resourceVersion": "7133",
+                "uid": "1361e35c-117e-4f8a-b8c6-55920618987e"
+            },
+            "reason": "NewReplicaSetCreated",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7132",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Rollout not completed, started update to revision 2 (df976ccb5)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow.18dc822e1223db8a",
+                "namespace": "taskflow",
+                "resourceVersion": "7134",
+                "uid": "320d9836-5cdb-4c84-bd4e-4193a63cb91a"
+            },
+            "reason": "RolloutNotCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7135",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Scaled down ReplicaSet taskflow-c6cf57bd6 (revision 1) from 4 to 3",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow.18dc822e1372abe4",
+                "namespace": "taskflow",
+                "resourceVersion": "7139",
+                "uid": "eaf55c41-1d28-4c6d-8239-0081006c5e1c"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:06Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7135",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:06Z",
+            "message": "Scaled up ReplicaSet taskflow-df976ccb5 (revision 2) from 0 to 1",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:06Z",
+                "name": "taskflow.18dc822e13f27efe",
+                "namespace": "taskflow",
+                "resourceVersion": "7146",
+                "uid": "249fbc71-d42b-4381-9d7f-ad2ae89efce5"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:12Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7161",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Switched selector for service 'taskflow-canary' from 'c6cf57bd6' to 'df976ccb5'",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:12Z",
+                "name": "taskflow.18dc822f92f0a305",
+                "namespace": "taskflow",
+                "resourceVersion": "8127",
+                "uid": "e336e1ee-40f6-4409-a406-71eca71d1377"
+            },
+            "reason": "SwitchService",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:12Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7161",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:12Z",
+            "message": "Rollout step 1/6 completed (setWeight: 25)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:12Z",
+                "name": "taskflow.18dc822f92fd85b9",
+                "namespace": "taskflow",
+                "resourceVersion": "7202",
+                "uid": "37516eb2-c4b4-4125-b54b-b6ffa72f4afc"
+            },
+            "reason": "RolloutStepCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:58:12Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7205",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:58:12Z",
+            "message": "Step Analysis Run 'taskflow-df976ccb5-2-1' Status New: 'Running' Previous: ''",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:58:12Z",
+                "name": "taskflow.18dc822f991fea10",
+                "namespace": "taskflow",
+                "resourceVersion": "7208",
+                "uid": "a2e9831f-69ba-4291-a225-3ca0cc37a930"
+            },
+            "reason": "AnalysisRunRunning",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7209",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Step Analysis Run 'taskflow-df976ccb5-2-1' Status New: 'Successful' Previous: 'Running'",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow.18dc8240e75a88ca",
+                "namespace": "taskflow",
+                "resourceVersion": "7387",
+                "uid": "a234af30-3106-4c93-aba0-cb82027e95c9"
+            },
+            "reason": "AnalysisRunSuccessful",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7209",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Rollout step 2/6 completed (analysis)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow.18dc8240e75ea60c",
+                "namespace": "taskflow",
+                "resourceVersion": "7390",
+                "uid": "c9f39f61-1e89-4d38-a661-242100432bcf"
+            },
+            "reason": "RolloutStepCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7389",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Scaled down ReplicaSet taskflow-c6cf57bd6 (revision 1) from 3 to 2",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow.18dc8240eb88b102",
+                "namespace": "taskflow",
+                "resourceVersion": "7393",
+                "uid": "ad7461f2-cbc6-4dda-9a30-00152b3bf22c"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:27Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7389",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:27Z",
+            "message": "Scaled up ReplicaSet taskflow-df976ccb5 (revision 2) from 1 to 2",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:27Z",
+                "name": "taskflow.18dc8240f211bc92",
+                "namespace": "taskflow",
+                "resourceVersion": "7399",
+                "uid": "a70118ad-ea9c-422d-9ca8-2369e048f723"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:33Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7413",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T08:59:33Z",
+            "message": "Rollout step 3/6 completed (setWeight: 50)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:33Z",
+                "name": "taskflow.18dc824280bd14a5",
+                "namespace": "taskflow",
+                "resourceVersion": "7450",
+                "uid": "0a839e7a-71f8-48b5-887a-8e65e8576db5"
+            },
+            "reason": "RolloutStepCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T08:59:33Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7451",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:09Z",
+            "message": "Rollout is paused (CanaryPauseStep)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T08:59:33Z",
+                "name": "taskflow.18dc82428255b979",
+                "namespace": "taskflow",
+                "resourceVersion": "7575",
+                "uid": "2ce2ca14-9419-48d0-923b-90b8d9823b29"
+            },
+            "reason": "RolloutPaused",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7454",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Rollout step 4/6 completed (pause: 30s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow.18dc824945d898f5",
+                "namespace": "taskflow",
+                "resourceVersion": "7510",
+                "uid": "9a05575c-10ac-4725-b8f1-4a1b8dfb6d36"
+            },
+            "reason": "RolloutStepCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7454",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Rollout is resumed",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow.18dc82494781f56d",
+                "namespace": "taskflow",
+                "resourceVersion": "7638",
+                "uid": "b3aa3eb4-e367-45e7-902f-9fb8cc890167"
+            },
+            "reason": "RolloutResumed",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7513",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Scaled down ReplicaSet taskflow-c6cf57bd6 (revision 1) from 2 to 1",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow.18dc824948c195a8",
+                "namespace": "taskflow",
+                "resourceVersion": "7515",
+                "uid": "dce98be7-1db9-44ee-86ab-051ffcb2d399"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:03Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7513",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:03Z",
+            "message": "Scaled up ReplicaSet taskflow-df976ccb5 (revision 2) from 2 to 3",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:03Z",
+                "name": "taskflow.18dc8249495fc6bd",
+                "namespace": "taskflow",
+                "resourceVersion": "7523",
+                "uid": "56de86d4-c7a6-43a0-8248-cfc05e312e6a"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:08Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7535",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:08Z",
+            "message": "Rollout step 5/6 completed (setWeight: 75)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:08Z",
+                "name": "taskflow.18dc824aab239c09",
+                "namespace": "taskflow",
+                "resourceVersion": "7572",
+                "uid": "b15b49a9-e503-4a94-b9cd-02190774f83d"
+            },
+            "reason": "RolloutStepCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7576",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Rollout step 6/6 completed (pause: 30s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow.18dc8251a7ac4514",
+                "namespace": "taskflow",
+                "resourceVersion": "7637",
+                "uid": "6814d52b-2384-4bdf-9f68-ca266247baab"
+            },
+            "reason": "RolloutStepCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7639",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Scaled down ReplicaSet taskflow-c6cf57bd6 (revision 1) from 1 to 0",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow.18dc8251aa9a64f7",
+                "namespace": "taskflow",
+                "resourceVersion": "7641",
+                "uid": "f1aad43f-8f7d-45f9-b46a-c446524d1890"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:39Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7639",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:39Z",
+            "message": "Scaled up ReplicaSet taskflow-df976ccb5 (revision 2) from 3 to 4",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:39Z",
+                "name": "taskflow.18dc8251ab3cc2af",
+                "namespace": "taskflow",
+                "resourceVersion": "7649",
+                "uid": "6fa07cb3-917a-4e1b-92e1-4525472b4469"
+            },
+            "reason": "ScalingReplicaSet",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:00:45Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7661",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:00:45Z",
+            "message": "Rollout completed update to revision 2 (df976ccb5): Completed all 6 canary steps",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:00:45Z",
+                "name": "taskflow.18dc825312fa826d",
+                "namespace": "taskflow",
+                "resourceVersion": "7699",
+                "uid": "752ad57a-9ad0-447d-b2fe-65f6685cf110"
+            },
+            "reason": "RolloutCompleted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7968",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Step Analysis Run 'taskflow-c6cf57bd6-3-1' Status New: 'Failed' Previous: 'Running'",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow.18dc8279b4bb8c00",
+                "namespace": "taskflow",
+                "resourceVersion": "8120",
+                "uid": "13e6372c-7657-401a-9bf6-e41a725e0cb9"
+            },
+            "reason": "AnalysisRunFailed",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-08T09:03:31Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Rollout",
+                "name": "taskflow",
+                "namespace": "taskflow",
+                "resourceVersion": "7968",
+                "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-08T09:03:31Z",
+            "message": "Rollout aborted update to revision 3: Step-based analysis phase error/failed: Metric \"test-de-charge-k6\" assessed Failed due to failed (1) \u003e failureLimit (0)",
+            "metadata": {
+                "creationTimestamp": "2026-10-08T09:03:31Z",
+                "name": "taskflow.18dc8279b4bfd2be",
+                "namespace": "taskflow",
+                "resourceVersion": "8121",
+                "uid": "3adcf759-f8c6-4d6d-b4d6-0dc4a4a9e379"
+            },
+            "reason": "RolloutAborted",
+            "reportingComponent": "rollouts-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "rollouts-controller"
+            },
+            "type": "Warning"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

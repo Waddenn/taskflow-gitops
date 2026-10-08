@@ -1,0 +1,47 @@
+[
+  {
+    "pod": "232965c9-7d69-48d1-bdb7-866ce4c801f4.test-de-charge-k6.1-qgfms",
+    "container": "k6",
+    "imageID": "docker.io/grafana/k6@sha256:e66db15b860113878fa74670e31f5e274830b7b6e42c8bff28b2f2d86a257603",
+    "exitCode": 99,
+    "reason": "Error",
+    "startedAt": "2026-10-08T09:06:51Z",
+    "finishedAt": "2026-10-08T09:07:52Z"
+  },
+  {
+    "pod": "91071046-e6df-4110-be1e-a132426db95f.test-de-charge-k6.1-dg9jc",
+    "container": "k6",
+    "imageID": "docker.io/grafana/k6@sha256:e66db15b860113878fa74670e31f5e274830b7b6e42c8bff28b2f2d86a257603",
+    "exitCode": 0,
+    "reason": "Completed",
+    "startedAt": "2026-10-08T09:10:11Z",
+    "finishedAt": "2026-10-08T09:11:13Z"
+  },
+  {
+    "pod": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1-ln9cc",
+    "container": "k6",
+    "imageID": "docker.io/grafana/k6@sha256:e66db15b860113878fa74670e31f5e274830b7b6e42c8bff28b2f2d86a257603",
+    "exitCode": 99,
+    "reason": "Error",
+    "startedAt": "2026-10-08T09:02:28Z",
+    "finishedAt": "2026-10-08T09:03:28Z"
+  },
+  {
+    "pod": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1-v54jv",
+    "container": "k6",
+    "imageID": "docker.io/grafana/k6@sha256:e66db15b860113878fa74670e31f5e274830b7b6e42c8bff28b2f2d86a257603",
+    "exitCode": 0,
+    "reason": "Completed",
+    "startedAt": "2026-10-08T08:58:13Z",
+    "finishedAt": "2026-10-08T08:59:13Z"
+  },
+  {
+    "pod": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1-hr87d",
+    "container": "k6",
+    "imageID": "docker.io/grafana/k6@sha256:e66db15b860113878fa74670e31f5e274830b7b6e42c8bff28b2f2d86a257603",
+    "exitCode": 0,
+    "reason": "Completed",
+    "startedAt": "2026-10-08T09:04:11Z",
+    "finishedAt": "2026-10-08T09:05:13Z"
+  }
+]

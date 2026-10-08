@@ -1,0 +1,36 @@
+Name:            taskflow
+Namespace:       taskflow
+Status:          ✖ Degraded
+Message:         RolloutAborted: Rollout aborted update to revision 4: Step-based analysis phase error/failed: Metric "test-de-charge-k6" assessed Failed due to failed (1) > failureLimit (0)
+Strategy:        Canary
+  Step:          0/6
+  SetWeight:     0
+  ActualWeight:  0
+Images:          ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0 (stable)
+Replicas:
+  Desired:       4
+  Current:       4
+  Updated:       0
+  Ready:         3
+  Available:     3
+
+NAME                                                                 KIND         STATUS         AGE    INFO
+⟳ taskflow                                                           Rollout      ✖ Degraded     62m
+├──# revision:4
+│  ├──⧉ taskflow-df976ccb5                                           ReplicaSet   • ScaledDown   9m59s  canary
+│  │  └──□ taskflow-df976ccb5-cpnf9                                  Pod          ◌ Terminating  82s    ready:0/1
+│  └──α taskflow-df976ccb5-4-1                                       AnalysisRun  ✖ Failed       75s    ✖ 1
+│     └──⊞ 232965c9-7d69-48d1-bdb7-866ce4c801f4.test-de-charge-k6.1  Job          ✖ Failed       75s
+├──# revision:3
+│  ├──⧉ taskflow-c6cf57bd6                                           ReplicaSet   ◌ Progressing  62m    stable
+│  │  ├──□ taskflow-c6cf57bd6-x486m                                  Pod          ✔ Running      4m1s   ready:1/1
+│  │  ├──□ taskflow-c6cf57bd6-bn876                                  Pod          ✔ Running      2m40s  ready:1/1
+│  │  ├──□ taskflow-c6cf57bd6-whj5d                                  Pod          ✔ Running      2m8s   ready:1/1
+│  │  └──□ taskflow-c6cf57bd6-x8tr7                                  Pod          ✔ Running      0s     ready:0/1
+│  ├──α taskflow-c6cf57bd6-3-1                                       AnalysisRun  ✖ Failed       5m38s  ✖ 1
+│  │  └──⊞ d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1  Job          ✖ Failed       5m38s
+│  └──α taskflow-c6cf57bd6-3-1.1                                     AnalysisRun  ✔ Successful   3m55s  ✔ 1
+│     └──⊞ f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1  Job          ✔ Successful   3m55s
+└──# revision:2
+   └──α taskflow-df976ccb5-2-1                                       AnalysisRun  ✔ Successful   9m53s  ✔ 1
+      └──⊞ e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1  Job          ✔ Successful   9m53s

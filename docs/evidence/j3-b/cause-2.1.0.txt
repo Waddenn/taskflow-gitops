@@ -1,0 +1,13 @@
+Pod: taskflow-df976ccb5-lfqtf
+{'VERSION': '2.1.0', 'FAILURE_RATE': 0.3, 'LATENCY_MS': 300}
+@app.middleware("http")
+async def inject_faults(request: Request, call_next):
+    """Simule une version défaillante : /health reste sain, les utilisateurs souffrent."""
+    if request.url.path != "/health":
+        if settings.LATENCY_MS:
+            await asyncio.sleep(settings.LATENCY_MS / 1000)
+        if settings.FAILURE_RATE and random.random() < settings.FAILURE_RATE:
+            return JSONResponse(status_code=500, content={"detail": "Erreur interne"})
+    return await call_next(request)
+
+health: {"status":"ok","version":"2.1.0","pod":"taskflow-df976ccb5-lfqtf"}

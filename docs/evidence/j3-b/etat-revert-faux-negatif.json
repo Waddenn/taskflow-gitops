@@ -1,0 +1,280 @@
+{
+  "at": "2026-10-08T09:03:47.997491+00:00",
+  "application": {
+    "source": {
+      "path": "apps/taskflow",
+      "repoURL": "https://github.com/Waddenn/taskflow-gitops.git",
+      "targetRevision": "main"
+    },
+    "sync": {
+      "comparedTo": {
+        "destination": {
+          "namespace": "taskflow",
+          "server": "https://kubernetes.default.svc"
+        },
+        "source": {
+          "path": "apps/taskflow",
+          "repoURL": "https://github.com/Waddenn/taskflow-gitops.git",
+          "targetRevision": "main"
+        }
+      },
+      "revision": "f20d0838edfd484bb2b5302857e43527ff501b6a",
+      "status": "Synced"
+    },
+    "health": {
+      "lastTransitionTime": "2026-10-08T09:03:31Z",
+      "status": "Degraded"
+    },
+    "reconciledAt": "2026-10-08T09:02:43Z"
+  },
+  "deployment": [],
+  "rollout": [
+    {
+      "name": "taskflow",
+      "status": {
+        "HPAReplicas": 4,
+        "abort": true,
+        "abortedAt": "2026-10-08T09:03:31Z",
+        "availableReplicas": 4,
+        "blueGreen": {},
+        "canary": {},
+        "conditions": [
+          {
+            "lastTransitionTime": "2026-10-08T09:00:39Z",
+            "lastUpdateTime": "2026-10-08T09:00:39Z",
+            "message": "Rollout is paused",
+            "reason": "RolloutPaused",
+            "status": "False",
+            "type": "Paused"
+          },
+          {
+            "lastTransitionTime": "2026-10-08T09:02:21Z",
+            "lastUpdateTime": "2026-10-08T09:02:21Z",
+            "message": "Rollout is not healthy",
+            "reason": "RolloutHealthy",
+            "status": "False",
+            "type": "Healthy"
+          },
+          {
+            "lastTransitionTime": "2026-10-08T09:02:21Z",
+            "lastUpdateTime": "2026-10-08T09:02:21Z",
+            "message": "RolloutCompleted",
+            "reason": "RolloutCompleted",
+            "status": "False",
+            "type": "Completed"
+          },
+          {
+            "lastTransitionTime": "2026-10-08T09:03:31Z",
+            "lastUpdateTime": "2026-10-08T09:03:31Z",
+            "message": "Rollout aborted update to revision 3: Step-based analysis phase error/failed: Metric \"test-de-charge-k6\" assessed Failed due to failed (1) > failureLimit (0)",
+            "reason": "RolloutAborted",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2026-10-08T09:03:37Z",
+            "lastUpdateTime": "2026-10-08T09:03:37Z",
+            "message": "Rollout has minimum availability",
+            "reason": "AvailableReason",
+            "status": "True",
+            "type": "Available"
+          }
+        ],
+        "currentPodHash": "c6cf57bd6",
+        "currentStepHash": "6c95957468",
+        "currentStepIndex": 0,
+        "message": "RolloutAborted: Rollout aborted update to revision 3: Step-based analysis phase error/failed: Metric \"test-de-charge-k6\" assessed Failed due to failed (1) > failureLimit (0)",
+        "observedGeneration": "4",
+        "phase": "Degraded",
+        "readyReplicas": 4,
+        "replicas": 4,
+        "selector": "app=taskflow",
+        "stableRS": "df976ccb5"
+      },
+      "replicas": 4,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow"
+        }
+      },
+      "strategy": {
+        "canary": {
+          "canaryService": "taskflow-canary",
+          "steps": [
+            {
+              "setWeight": 25
+            },
+            {
+              "analysis": {
+                "args": [
+                  {
+                    "name": "cible",
+                    "value": "http://taskflow-canary"
+                  }
+                ],
+                "templates": [
+                  {
+                    "templateName": "robustesse-k6"
+                  }
+                ]
+              }
+            },
+            {
+              "setWeight": 50
+            },
+            {
+              "pause": {
+                "duration": "30s"
+              }
+            },
+            {
+              "setWeight": 75
+            },
+            {
+              "pause": {
+                "duration": "30s"
+              }
+            }
+          ]
+        }
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    }
+  ],
+  "replicaset": [
+    {
+      "name": "taskflow-c6cf57bd6",
+      "status": {
+        "observedGeneration": 8,
+        "replicas": 0,
+        "terminatingReplicas": 0
+      },
+      "replicas": 0,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow",
+          "rollouts-pod-template-hash": "c6cf57bd6"
+        }
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0"
+      ]
+    },
+    {
+      "name": "taskflow-df976ccb5",
+      "status": {
+        "availableReplicas": 4,
+        "fullyLabeledReplicas": 4,
+        "observedGeneration": 7,
+        "readyReplicas": 4,
+        "replicas": 4,
+        "terminatingReplicas": 0
+      },
+      "replicas": 4,
+      "selector": {
+        "matchLabels": {
+          "app": "taskflow",
+          "rollouts-pod-template-hash": "df976ccb5"
+        }
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0"
+      ]
+    }
+  ],
+  "service": [
+    {
+      "name": "taskflow",
+      "status": {
+        "loadBalancer": {}
+      },
+      "selector": {
+        "app": "taskflow"
+      },
+      "images": []
+    },
+    {
+      "name": "taskflow-canary",
+      "status": {
+        "loadBalancer": {}
+      },
+      "selector": {
+        "app": "taskflow",
+        "rollouts-pod-template-hash": "df976ccb5"
+      },
+      "images": []
+    }
+  ],
+  "pod": [
+    {
+      "name": "taskflow-df976ccb5-6dsnh",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:36f6d0794df869ad4d1d7ca610702c14e14f42669137e9ef2ef6c1f706667c05"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0"
+      ]
+    },
+    {
+      "name": "taskflow-df976ccb5-dgvv6",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:36f6d0794df869ad4d1d7ca610702c14e14f42669137e9ef2ef6c1f706667c05"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0"
+      ]
+    },
+    {
+      "name": "taskflow-df976ccb5-lfqtf",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:36f6d0794df869ad4d1d7ca610702c14e14f42669137e9ef2ef6c1f706667c05"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0"
+      ]
+    },
+    {
+      "name": "taskflow-df976ccb5-xmxxk",
+      "status": {
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "taskflow",
+            "ready": true,
+            "restartCount": 0,
+            "imageID": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:36f6d0794df869ad4d1d7ca610702c14e14f42669137e9ef2ef6c1f706667c05"
+          }
+        ]
+      },
+      "images": [
+        "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0"
+      ]
+    }
+  ]
+}

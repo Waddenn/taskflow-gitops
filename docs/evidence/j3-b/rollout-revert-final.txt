@@ -1,0 +1,35 @@
+Name:            taskflow
+Namespace:       taskflow
+Status:          ✔ Healthy
+Strategy:        Canary
+  Step:          6/6
+  SetWeight:     100
+  ActualWeight:  100
+Images:          ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0 (stable)
+Replicas:
+  Desired:       4
+  Current:       4
+  Updated:       4
+  Ready:         4
+  Available:     4
+
+NAME                                                                 KIND         STATUS        AGE    INFO
+⟳ taskflow                                                           Rollout      ✔ Healthy     63m
+├──# revision:5
+│  └──⧉ taskflow-c6cf57bd6                                           ReplicaSet   ✔ Healthy     63m    stable
+│     ├──□ taskflow-c6cf57bd6-x486m                                  Pod          ✔ Running     5m18s  ready:1/1
+│     ├──□ taskflow-c6cf57bd6-bn876                                  Pod          ✔ Running     3m57s  ready:1/1
+│     ├──□ taskflow-c6cf57bd6-whj5d                                  Pod          ✔ Running     3m25s  ready:1/1
+│     └──□ taskflow-c6cf57bd6-x8tr7                                  Pod          ✔ Running     77s    ready:1/1
+├──# revision:4
+│  ├──⧉ taskflow-df976ccb5                                           ReplicaSet   • ScaledDown  11m
+│  └──α taskflow-df976ccb5-4-1                                       AnalysisRun  ✖ Failed      2m32s  ✖ 1
+│     └──⊞ 232965c9-7d69-48d1-bdb7-866ce4c801f4.test-de-charge-k6.1  Job          ✖ Failed      2m32s
+├──# revision:3
+│  ├──α taskflow-c6cf57bd6-3-1                                       AnalysisRun  ✖ Failed      6m55s  ✖ 1
+│  │  └──⊞ d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1  Job          ✖ Failed      6m55s
+│  └──α taskflow-c6cf57bd6-3-1.1                                     AnalysisRun  ✔ Successful  5m12s  ✔ 1
+│     └──⊞ f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1  Job          ✔ Successful  5m12s
+└──# revision:2
+   └──α taskflow-df976ccb5-2-1                                       AnalysisRun  ✔ Successful  11m    ✔ 1
+      └──⊞ e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1  Job          ✔ Successful  11m

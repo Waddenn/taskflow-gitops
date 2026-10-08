@@ -1,0 +1,40 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.244.0.1:59952 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38530 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:59968 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:59984 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:54494 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:54500 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:54504 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:49810 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:49812 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:49822 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:36482 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:36484 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:36486 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:42822 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:42836 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:42842 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:47278 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:47280 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:47288 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:36994 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:36998 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:37004 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:50444 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:50452 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:50464 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:48264 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:48268 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:48280 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:41504 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:41510 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:41516 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45546 - "GET /tasks HTTP/1.1" 200 OK
+INFO:     10.244.0.1:56574 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:56590 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:56602 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:57324 - "GET /health HTTP/1.1" 200 OK

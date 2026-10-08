@@ -82,6 +82,6 @@ de référence manuel a été exécuté dans cette partie A.
 
 ## Limite de ce rendu
 
-La partie B (incident 2.1.0, abort, revert, passage 2.2.0, postmortem) et la partie C
-(PSSI et sécurité) ne sont pas réalisées. Les preuves d’incident J2 existantes
+À la fin de cette étape, les parties B et C n’étaient pas réalisées.
+La [partie B a ensuite été réalisée](J3-partie-B.md) ; la partie C reste hors périmètre. Les preuves d’incident J2 existantes
 restent des observations J2 et ne démontrent pas un abort automatique J3.
