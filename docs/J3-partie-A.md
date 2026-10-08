@@ -68,6 +68,18 @@ Preuves : [validation locale](evidence/j3-a/validation.txt),
 [validation serveur sans application](evidence/j3-a/dry-run-server.txt),
 [CRD installées](evidence/j3-a/crd.txt).
 
+Après fusion de la PR #18, vérification le 8 octobre à 10 h 08 (Paris) :
+Argo CD a synchronisé le commit `4af6f7b`, en état **Synced / Healthy**.
+TaskFlow reste en **2.0.0**, avec **4/4 pods prêts**, **un Rollout et zéro Deployment**.
+L’AnalysisTemplate `robustesse-k6`, la ConfigMap `k6-robustesse` et les deux Services
+sont présents. Le sélecteur de `taskflow-canary` correspond au hash du Rollout.
+Voir l’[état final](evidence/j3-a/etat-final.json) et la
+[vérification finale](evidence/j3-a/verification-finale.json).
+
+Aucun AnalysisRun n’a été créé : la version et le template des pods n’ont pas changé.
+L’analyse automatique est configurée pour le prochain déploiement ; seul le test
+de référence manuel a été exécuté dans cette partie A.
+
 ## Limite de ce rendu
 
 La partie B (incident 2.1.0, abort, revert, passage 2.2.0, postmortem) et la partie C
