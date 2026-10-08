@@ -1,0 +1,4 @@
+FAIL - apps/taskflow/rollout.yaml - main - PSSI-R3 : le conteneur 'taskflow' doit avoir resources.limits.memory
+FAIL - apps/taskflow/rollout.yaml - main - PSSI-R4 : le pod de 'taskflow' doit déclarer securityContext.runAsNonRoot: true
+
+40 tests, 38 passed, 0 warnings, 2 failures, 0 exceptions

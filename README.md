@@ -23,8 +23,11 @@ Le rejeu mesure 27,71 % d’erreurs et un p95 de 308,43 ms ; la 2.2.0 passe avec
 - [Partie A : étalon et analyse](docs/J3-partie-A.md)
 - [Partie B : journal, mesures et captures](docs/J3-partie-B.md)
 - [Postmortem 2.1.0 et correction du contrôle k6](docs/postmortem-2.1.0.md)
+- [Partie C : mini-PSSI, tableau des contrôles et PR bloquée](docs/J3-partie-C.md)
 
-La partie C n’est pas réalisée.
+Les deux checks PSSI sont obligatoires. La PR #29 est volontairement bloquée sur R3/R4.
+Trivy détecte neuf vulnérabilités HIGH dans l’image du cours : dérogations individuelles
+limitées au digest 2.2.0, jusqu’au 15 octobre 2026 ; elles ne sont pas corrigées.
 
 ## Fonctionnement
 
