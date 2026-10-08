@@ -12,7 +12,7 @@ CLUSTER="cicd"
 KUBECTL_VERSION="v1.37.0"
 NODE_IMAGE="kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5"
 IMAGE_REPO="ghcr.io/9m7fjfpv9k-cyber/taskflow"
-LAB_IMAGES="${IMAGE_REPO}:1.0.0 ${IMAGE_REPO}:1.1.0 ${IMAGE_REPO}:2.0.0 ${IMAGE_REPO}:2.1.0 curlimages/curl:8.12.1 grafana/k6:latest"
+LAB_IMAGES="${IMAGE_REPO}:1.0.0 ${IMAGE_REPO}:1.1.0 ${IMAGE_REPO}:2.0.0 ${IMAGE_REPO}:2.1.0 ${IMAGE_REPO}:2.2.0 curlimages/curl:8.12.1 grafana/k6:latest"
 
 BIN_DIR="${HOME}/.local/bin"
 mkdir -p "${BIN_DIR}"
