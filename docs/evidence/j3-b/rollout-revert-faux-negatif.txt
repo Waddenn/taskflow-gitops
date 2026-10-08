@@ -1,0 +1,30 @@
+Name:            taskflow
+Namespace:       taskflow
+Status:          ✖ Degraded
+Message:         RolloutAborted: Rollout aborted update to revision 3: Step-based analysis phase error/failed: Metric "test-de-charge-k6" assessed Failed due to failed (1) > failureLimit (0)
+Strategy:        Canary
+  Step:          0/6
+  SetWeight:     0
+  ActualWeight:  0
+Images:          ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0 (stable)
+Replicas:
+  Desired:       4
+  Current:       4
+  Updated:       0
+  Ready:         4
+  Available:     4
+
+NAME                                                                 KIND         STATUS        AGE    INFO
+⟳ taskflow                                                           Rollout      ✖ Degraded    58m
+├──# revision:3
+│  ├──⧉ taskflow-c6cf57bd6                                           ReplicaSet   • ScaledDown  58m    canary
+│  └──α taskflow-c6cf57bd6-3-1                                       AnalysisRun  ✖ Failed      80s    ✖ 1
+│     └──⊞ d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1  Job          ✖ Failed      80s
+└──# revision:2
+   ├──⧉ taskflow-df976ccb5                                           ReplicaSet   ✔ Healthy     5m41s  stable
+   │  ├──□ taskflow-df976ccb5-lfqtf                                  Pod          ✔ Running     5m41s  ready:1/1
+   │  ├──□ taskflow-df976ccb5-6dsnh                                  Pod          ✔ Running     4m20s  ready:1/1
+   │  ├──□ taskflow-df976ccb5-xmxxk                                  Pod          ✔ Running     3m44s  ready:1/1
+   │  └──□ taskflow-df976ccb5-dgvv6                                  Pod          ✔ Running     16s    ready:1/1
+   └──α taskflow-df976ccb5-2-1                                       AnalysisRun  ✔ Successful  5m35s  ✔ 1
+      └──⊞ e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1  Job          ✔ Successful  5m35s

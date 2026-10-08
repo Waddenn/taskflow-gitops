@@ -1,0 +1,31 @@
+Name:            taskflow
+Namespace:       taskflow
+Status:          ✔ Healthy
+Strategy:        Canary
+  Step:          6/6
+  SetWeight:     100
+  ActualWeight:  100
+Images:          ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0 (stable)
+Replicas:
+  Desired:       4
+  Current:       4
+  Updated:       4
+  Ready:         4
+  Available:     4
+
+NAME                                                                 KIND         STATUS        AGE    INFO
+⟳ taskflow                                                           Rollout      ✔ Healthy     60m
+├──# revision:3
+│  ├──⧉ taskflow-c6cf57bd6                                           ReplicaSet   ✔ Healthy     60m    stable
+│  │  ├──□ taskflow-c6cf57bd6-x486m                                  Pod          ✔ Running     2m34s  ready:1/1
+│  │  ├──□ taskflow-c6cf57bd6-bn876                                  Pod          ✔ Running     73s    ready:1/1
+│  │  ├──□ taskflow-c6cf57bd6-whj5d                                  Pod          ✔ Running     41s    ready:1/1
+│  │  └──□ taskflow-c6cf57bd6-zq97p                                  Pod          ✔ Running     4s     ready:1/1
+│  ├──α taskflow-c6cf57bd6-3-1                                       AnalysisRun  ✖ Failed      4m11s  ✖ 1
+│  │  └──⊞ d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1  Job          ✖ Failed      4m11s
+│  └──α taskflow-c6cf57bd6-3-1.1                                     AnalysisRun  ✔ Successful  2m28s  ✔ 1
+│     └──⊞ f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1  Job          ✔ Successful  2m28s
+└──# revision:2
+   ├──⧉ taskflow-df976ccb5                                           ReplicaSet   • ScaledDown  8m32s
+   └──α taskflow-df976ccb5-2-1                                       AnalysisRun  ✔ Successful  8m26s  ✔ 1
+      └──⊞ e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1  Job          ✔ Successful  8m26s

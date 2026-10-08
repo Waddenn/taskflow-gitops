@@ -1,0 +1,36 @@
+Name:            taskflow
+Namespace:       taskflow
+Status:          ◌ Progressing
+Message:         more replicas need to be updated
+Strategy:        Canary
+  Step:          1/6
+  SetWeight:     25
+  ActualWeight:  25
+Images:          ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0 (stable)
+                 ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0 (canary)
+Replicas:
+  Desired:       4
+  Current:       4
+  Updated:       1
+  Ready:         4
+  Available:     4
+
+NAME                                                                 KIND         STATUS         AGE    INFO
+⟳ taskflow                                                           Rollout      ◌ Progressing  61m
+├──# revision:4
+│  ├──⧉ taskflow-df976ccb5                                           ReplicaSet   ✔ Healthy      9m16s  canary
+│  │  └──□ taskflow-df976ccb5-cpnf9                                  Pod          ✔ Running      39s    ready:1/1
+│  └──α taskflow-df976ccb5-4-1                                       AnalysisRun  ◌ Running      32s
+│     └──⊞ 232965c9-7d69-48d1-bdb7-866ce4c801f4.test-de-charge-k6.1  Job          ◌ Running      32s
+├──# revision:3
+│  ├──⧉ taskflow-c6cf57bd6                                           ReplicaSet   ✔ Healthy      61m    stable
+│  │  ├──□ taskflow-c6cf57bd6-x486m                                  Pod          ✔ Running      3m18s  ready:1/1
+│  │  ├──□ taskflow-c6cf57bd6-bn876                                  Pod          ✔ Running      117s   ready:1/1
+│  │  └──□ taskflow-c6cf57bd6-whj5d                                  Pod          ✔ Running      85s    ready:1/1
+│  ├──α taskflow-c6cf57bd6-3-1                                       AnalysisRun  ✖ Failed       4m55s  ✖ 1
+│  │  └──⊞ d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1  Job          ✖ Failed       4m55s
+│  └──α taskflow-c6cf57bd6-3-1.1                                     AnalysisRun  ✔ Successful   3m12s  ✔ 1
+│     └──⊞ f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1  Job          ✔ Successful   3m12s
+└──# revision:2
+   └──α taskflow-df976ccb5-2-1                                       AnalysisRun  ✔ Successful   9m10s  ✔ 1
+      └──⊞ e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1  Job          ✔ Successful   9m10s

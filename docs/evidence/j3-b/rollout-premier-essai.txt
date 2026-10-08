@@ -1,0 +1,29 @@
+Name:            taskflow
+Namespace:       taskflow
+Status:          ॥ Paused
+Message:         CanaryPauseStep
+Strategy:        Canary
+  Step:          3/6
+  SetWeight:     50
+  ActualWeight:  50
+Images:          ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0 (stable)
+                 ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0 (canary)
+Replicas:
+  Desired:       4
+  Current:       4
+  Updated:       2
+  Ready:         4
+  Available:     4
+
+NAME                                                                 KIND         STATUS        AGE   INFO
+⟳ taskflow                                                           Rollout      ॥ Paused      54m
+├──# revision:2
+│  ├──⧉ taskflow-df976ccb5                                           ReplicaSet   ✔ Healthy     103s  canary
+│  │  ├──□ taskflow-df976ccb5-lfqtf                                  Pod          ✔ Running     103s  ready:1/1
+│  │  └──□ taskflow-df976ccb5-6dsnh                                  Pod          ✔ Running     22s   ready:1/1
+│  └──α taskflow-df976ccb5-2-1                                       AnalysisRun  ✔ Successful  97s   ✔ 1
+│     └──⊞ e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1  Job          ✔ Successful  97s
+└──# revision:1
+   └──⧉ taskflow-c6cf57bd6                                           ReplicaSet   ✔ Healthy     54m   stable
+      ├──□ taskflow-c6cf57bd6-hwqpf                                  Pod          ✔ Running     54m   ready:1/1
+      └──□ taskflow-c6cf57bd6-n8vbp                                  Pod          ✔ Running     54m   ready:1/1

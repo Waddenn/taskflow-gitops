@@ -1,0 +1,678 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "argoproj.io/v1alpha1",
+            "kind": "AnalysisRun",
+            "metadata": {
+                "annotations": {
+                    "rollout.argoproj.io/revision": "6"
+                },
+                "creationTimestamp": "2026-10-08T09:10:10Z",
+                "generation": 17,
+                "labels": {
+                    "app": "taskflow",
+                    "rollout-type": "Step",
+                    "rollouts-pod-template-hash": "7ddd57d788",
+                    "step-index": "1"
+                },
+                "name": "taskflow-7ddd57d788-6-1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Rollout",
+                        "name": "taskflow",
+                        "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+                    }
+                ],
+                "resourceVersion": "9650",
+                "uid": "91071046-e6df-4110-be1e-a132426db95f"
+            },
+            "spec": {
+                "args": [
+                    {
+                        "name": "cible",
+                        "value": "http://taskflow-canary"
+                    },
+                    {
+                        "name": "pod-hash",
+                        "value": "7ddd57d788"
+                    }
+                ],
+                "metrics": [
+                    {
+                        "name": "test-de-charge-k6",
+                        "provider": {
+                            "job": {
+                                "metadata": {},
+                                "spec": {
+                                    "backoffLimit": 0,
+                                    "template": {
+                                        "metadata": {},
+                                        "spec": {
+                                            "containers": [
+                                                {
+                                                    "args": [
+                                                        "run",
+                                                        "/scripts/robustesse.js"
+                                                    ],
+                                                    "env": [
+                                                        {
+                                                            "name": "TARGET",
+                                                            "value": "{{args.cible}}"
+                                                        },
+                                                        {
+                                                            "name": "EXPECTED_HASH",
+                                                            "value": "{{args.pod-hash}}"
+                                                        }
+                                                    ],
+                                                    "image": "grafana/k6:latest",
+                                                    "imagePullPolicy": "IfNotPresent",
+                                                    "name": "k6",
+                                                    "resources": {
+                                                        "limits": {
+                                                            "memory": "256Mi"
+                                                        },
+                                                        "requests": {
+                                                            "cpu": "100m",
+                                                            "memory": "64Mi"
+                                                        }
+                                                    },
+                                                    "volumeMounts": [
+                                                        {
+                                                            "mountPath": "/scripts",
+                                                            "name": "scripts"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "restartPolicy": "Never",
+                                            "volumes": [
+                                                {
+                                                    "configMap": {
+                                                        "name": "k6-robustesse"
+                                                    },
+                                                    "name": "scripts"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "completedAt": "2026-10-08T09:11:25Z",
+                "dryRunSummary": {},
+                "metricResults": [
+                    {
+                        "consecutiveSuccess": 1,
+                        "count": 1,
+                        "measurements": [
+                            {
+                                "finishedAt": "2026-10-08T09:11:25Z",
+                                "metadata": {
+                                    "job-name": "91071046-e6df-4110-be1e-a132426db95f.test-de-charge-k6.1",
+                                    "job-namespace": "taskflow"
+                                },
+                                "phase": "Successful",
+                                "resumeAt": "2026-10-08T09:11:25Z",
+                                "startedAt": "2026-10-08T09:10:10Z"
+                            }
+                        ],
+                        "name": "test-de-charge-k6",
+                        "phase": "Successful",
+                        "successful": 1
+                    }
+                ],
+                "phase": "Successful",
+                "runSummary": {
+                    "count": 1,
+                    "successful": 1
+                },
+                "startedAt": "2026-10-08T09:10:11Z"
+            }
+        },
+        {
+            "apiVersion": "argoproj.io/v1alpha1",
+            "kind": "AnalysisRun",
+            "metadata": {
+                "annotations": {
+                    "rollout.argoproj.io/revision": "3"
+                },
+                "creationTimestamp": "2026-10-08T09:02:27Z",
+                "generation": 16,
+                "labels": {
+                    "app": "taskflow",
+                    "rollout-type": "Step",
+                    "rollouts-pod-template-hash": "c6cf57bd6",
+                    "step-index": "1"
+                },
+                "name": "taskflow-c6cf57bd6-3-1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Rollout",
+                        "name": "taskflow",
+                        "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+                    }
+                ],
+                "resourceVersion": "8118",
+                "uid": "d831d915-64c5-4c72-b684-6c70c0e6af87"
+            },
+            "spec": {
+                "args": [
+                    {
+                        "name": "cible",
+                        "value": "http://taskflow-canary"
+                    }
+                ],
+                "metrics": [
+                    {
+                        "name": "test-de-charge-k6",
+                        "provider": {
+                            "job": {
+                                "metadata": {},
+                                "spec": {
+                                    "backoffLimit": 0,
+                                    "template": {
+                                        "metadata": {},
+                                        "spec": {
+                                            "containers": [
+                                                {
+                                                    "args": [
+                                                        "run",
+                                                        "/scripts/robustesse.js"
+                                                    ],
+                                                    "env": [
+                                                        {
+                                                            "name": "TARGET",
+                                                            "value": "{{args.cible}}"
+                                                        }
+                                                    ],
+                                                    "image": "grafana/k6:latest",
+                                                    "imagePullPolicy": "IfNotPresent",
+                                                    "name": "k6",
+                                                    "resources": {
+                                                        "limits": {
+                                                            "memory": "256Mi"
+                                                        },
+                                                        "requests": {
+                                                            "cpu": "100m",
+                                                            "memory": "64Mi"
+                                                        }
+                                                    },
+                                                    "volumeMounts": [
+                                                        {
+                                                            "mountPath": "/scripts",
+                                                            "name": "scripts"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "restartPolicy": "Never",
+                                            "volumes": [
+                                                {
+                                                    "configMap": {
+                                                        "name": "k6-robustesse"
+                                                    },
+                                                    "name": "scripts"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "completedAt": "2026-10-08T09:03:31Z",
+                "dryRunSummary": {},
+                "message": "Metric \"test-de-charge-k6\" assessed Failed due to failed (1) \u003e failureLimit (0)",
+                "metricResults": [
+                    {
+                        "count": 1,
+                        "failed": 1,
+                        "measurements": [
+                            {
+                                "finishedAt": "2026-10-08T09:03:31Z",
+                                "metadata": {
+                                    "job-name": "d831d915-64c5-4c72-b684-6c70c0e6af87.test-de-charge-k6.1",
+                                    "job-namespace": "taskflow"
+                                },
+                                "phase": "Failed",
+                                "resumeAt": "2026-10-08T09:03:31Z",
+                                "startedAt": "2026-10-08T09:02:27Z"
+                            }
+                        ],
+                        "name": "test-de-charge-k6",
+                        "phase": "Failed"
+                    }
+                ],
+                "phase": "Failed",
+                "runSummary": {
+                    "count": 1,
+                    "failed": 1
+                },
+                "startedAt": "2026-10-08T09:02:27Z"
+            }
+        },
+        {
+            "apiVersion": "argoproj.io/v1alpha1",
+            "kind": "AnalysisRun",
+            "metadata": {
+                "annotations": {
+                    "rollout.argoproj.io/revision": "3"
+                },
+                "creationTimestamp": "2026-10-08T09:04:10Z",
+                "generation": 16,
+                "labels": {
+                    "app": "taskflow",
+                    "rollout-type": "Step",
+                    "rollouts-pod-template-hash": "c6cf57bd6",
+                    "step-index": "1"
+                },
+                "name": "taskflow-c6cf57bd6-3-1.1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Rollout",
+                        "name": "taskflow",
+                        "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+                    }
+                ],
+                "resourceVersion": "8494",
+                "uid": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf"
+            },
+            "spec": {
+                "args": [
+                    {
+                        "name": "cible",
+                        "value": "http://taskflow-canary"
+                    },
+                    {
+                        "name": "pod-hash",
+                        "value": "c6cf57bd6"
+                    }
+                ],
+                "metrics": [
+                    {
+                        "name": "test-de-charge-k6",
+                        "provider": {
+                            "job": {
+                                "metadata": {},
+                                "spec": {
+                                    "backoffLimit": 0,
+                                    "template": {
+                                        "metadata": {},
+                                        "spec": {
+                                            "containers": [
+                                                {
+                                                    "args": [
+                                                        "run",
+                                                        "/scripts/robustesse.js"
+                                                    ],
+                                                    "env": [
+                                                        {
+                                                            "name": "TARGET",
+                                                            "value": "{{args.cible}}"
+                                                        },
+                                                        {
+                                                            "name": "EXPECTED_HASH",
+                                                            "value": "{{args.pod-hash}}"
+                                                        }
+                                                    ],
+                                                    "image": "grafana/k6:latest",
+                                                    "imagePullPolicy": "IfNotPresent",
+                                                    "name": "k6",
+                                                    "resources": {
+                                                        "limits": {
+                                                            "memory": "256Mi"
+                                                        },
+                                                        "requests": {
+                                                            "cpu": "100m",
+                                                            "memory": "64Mi"
+                                                        }
+                                                    },
+                                                    "volumeMounts": [
+                                                        {
+                                                            "mountPath": "/scripts",
+                                                            "name": "scripts"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "restartPolicy": "Never",
+                                            "volumes": [
+                                                {
+                                                    "configMap": {
+                                                        "name": "k6-robustesse"
+                                                    },
+                                                    "name": "scripts"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "completedAt": "2026-10-08T09:05:25Z",
+                "dryRunSummary": {},
+                "metricResults": [
+                    {
+                        "consecutiveSuccess": 1,
+                        "count": 1,
+                        "measurements": [
+                            {
+                                "finishedAt": "2026-10-08T09:05:25Z",
+                                "metadata": {
+                                    "job-name": "f85f8cbe-df3d-47ae-85c6-cee3b00ab3bf.test-de-charge-k6.1",
+                                    "job-namespace": "taskflow"
+                                },
+                                "phase": "Successful",
+                                "resumeAt": "2026-10-08T09:05:25Z",
+                                "startedAt": "2026-10-08T09:04:10Z"
+                            }
+                        ],
+                        "name": "test-de-charge-k6",
+                        "phase": "Successful",
+                        "successful": 1
+                    }
+                ],
+                "phase": "Successful",
+                "runSummary": {
+                    "count": 1,
+                    "successful": 1
+                },
+                "startedAt": "2026-10-08T09:04:10Z"
+            }
+        },
+        {
+            "apiVersion": "argoproj.io/v1alpha1",
+            "kind": "AnalysisRun",
+            "metadata": {
+                "annotations": {
+                    "rollout.argoproj.io/revision": "2"
+                },
+                "creationTimestamp": "2026-10-08T08:58:12Z",
+                "generation": 17,
+                "labels": {
+                    "app": "taskflow",
+                    "rollout-type": "Step",
+                    "rollouts-pod-template-hash": "df976ccb5",
+                    "step-index": "1"
+                },
+                "name": "taskflow-df976ccb5-2-1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Rollout",
+                        "name": "taskflow",
+                        "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+                    }
+                ],
+                "resourceVersion": "7385",
+                "uid": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca"
+            },
+            "spec": {
+                "args": [
+                    {
+                        "name": "cible",
+                        "value": "http://taskflow-canary"
+                    }
+                ],
+                "metrics": [
+                    {
+                        "name": "test-de-charge-k6",
+                        "provider": {
+                            "job": {
+                                "metadata": {},
+                                "spec": {
+                                    "backoffLimit": 0,
+                                    "template": {
+                                        "metadata": {},
+                                        "spec": {
+                                            "containers": [
+                                                {
+                                                    "args": [
+                                                        "run",
+                                                        "/scripts/robustesse.js"
+                                                    ],
+                                                    "env": [
+                                                        {
+                                                            "name": "TARGET",
+                                                            "value": "{{args.cible}}"
+                                                        }
+                                                    ],
+                                                    "image": "grafana/k6:latest",
+                                                    "imagePullPolicy": "IfNotPresent",
+                                                    "name": "k6",
+                                                    "resources": {
+                                                        "limits": {
+                                                            "memory": "256Mi"
+                                                        },
+                                                        "requests": {
+                                                            "cpu": "100m",
+                                                            "memory": "64Mi"
+                                                        }
+                                                    },
+                                                    "volumeMounts": [
+                                                        {
+                                                            "mountPath": "/scripts",
+                                                            "name": "scripts"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "restartPolicy": "Never",
+                                            "volumes": [
+                                                {
+                                                    "configMap": {
+                                                        "name": "k6-robustesse"
+                                                    },
+                                                    "name": "scripts"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "completedAt": "2026-10-08T08:59:27Z",
+                "dryRunSummary": {},
+                "metricResults": [
+                    {
+                        "consecutiveSuccess": 1,
+                        "count": 1,
+                        "measurements": [
+                            {
+                                "finishedAt": "2026-10-08T08:59:27Z",
+                                "metadata": {
+                                    "job-name": "e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1",
+                                    "job-namespace": "taskflow"
+                                },
+                                "phase": "Successful",
+                                "resumeAt": "2026-10-08T08:59:27Z",
+                                "startedAt": "2026-10-08T08:58:12Z"
+                            }
+                        ],
+                        "name": "test-de-charge-k6",
+                        "phase": "Successful",
+                        "successful": 1
+                    }
+                ],
+                "phase": "Successful",
+                "runSummary": {
+                    "count": 1,
+                    "successful": 1
+                },
+                "startedAt": "2026-10-08T08:58:12Z"
+            }
+        },
+        {
+            "apiVersion": "argoproj.io/v1alpha1",
+            "kind": "AnalysisRun",
+            "metadata": {
+                "annotations": {
+                    "rollout.argoproj.io/revision": "4"
+                },
+                "creationTimestamp": "2026-10-08T09:06:50Z",
+                "generation": 17,
+                "labels": {
+                    "app": "taskflow",
+                    "rollout-type": "Step",
+                    "rollouts-pod-template-hash": "df976ccb5",
+                    "step-index": "1"
+                },
+                "name": "taskflow-df976ccb5-4-1",
+                "namespace": "taskflow",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "argoproj.io/v1alpha1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Rollout",
+                        "name": "taskflow",
+                        "uid": "ab1bf4fb-a933-487c-8c81-1ec287b56d18"
+                    }
+                ],
+                "resourceVersion": "9059",
+                "uid": "232965c9-7d69-48d1-bdb7-866ce4c801f4"
+            },
+            "spec": {
+                "args": [
+                    {
+                        "name": "cible",
+                        "value": "http://taskflow-canary"
+                    },
+                    {
+                        "name": "pod-hash",
+                        "value": "df976ccb5"
+                    }
+                ],
+                "metrics": [
+                    {
+                        "name": "test-de-charge-k6",
+                        "provider": {
+                            "job": {
+                                "metadata": {},
+                                "spec": {
+                                    "backoffLimit": 0,
+                                    "template": {
+                                        "metadata": {},
+                                        "spec": {
+                                            "containers": [
+                                                {
+                                                    "args": [
+                                                        "run",
+                                                        "/scripts/robustesse.js"
+                                                    ],
+                                                    "env": [
+                                                        {
+                                                            "name": "TARGET",
+                                                            "value": "{{args.cible}}"
+                                                        },
+                                                        {
+                                                            "name": "EXPECTED_HASH",
+                                                            "value": "{{args.pod-hash}}"
+                                                        }
+                                                    ],
+                                                    "image": "grafana/k6:latest",
+                                                    "imagePullPolicy": "IfNotPresent",
+                                                    "name": "k6",
+                                                    "resources": {
+                                                        "limits": {
+                                                            "memory": "256Mi"
+                                                        },
+                                                        "requests": {
+                                                            "cpu": "100m",
+                                                            "memory": "64Mi"
+                                                        }
+                                                    },
+                                                    "volumeMounts": [
+                                                        {
+                                                            "mountPath": "/scripts",
+                                                            "name": "scripts"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "restartPolicy": "Never",
+                                            "volumes": [
+                                                {
+                                                    "configMap": {
+                                                        "name": "k6-robustesse"
+                                                    },
+                                                    "name": "scripts"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "completedAt": "2026-10-08T09:08:05Z",
+                "dryRunSummary": {},
+                "message": "Metric \"test-de-charge-k6\" assessed Failed due to failed (1) \u003e failureLimit (0)",
+                "metricResults": [
+                    {
+                        "count": 1,
+                        "failed": 1,
+                        "measurements": [
+                            {
+                                "finishedAt": "2026-10-08T09:08:05Z",
+                                "metadata": {
+                                    "job-name": "232965c9-7d69-48d1-bdb7-866ce4c801f4.test-de-charge-k6.1",
+                                    "job-namespace": "taskflow"
+                                },
+                                "phase": "Failed",
+                                "resumeAt": "2026-10-08T09:08:05Z",
+                                "startedAt": "2026-10-08T09:06:50Z"
+                            }
+                        ],
+                        "name": "test-de-charge-k6",
+                        "phase": "Failed"
+                    }
+                ],
+                "phase": "Failed",
+                "runSummary": {
+                    "count": 1,
+                    "failed": 1
+                },
+                "startedAt": "2026-10-08T09:06:50Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

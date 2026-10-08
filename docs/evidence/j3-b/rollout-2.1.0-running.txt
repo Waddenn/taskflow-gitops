@@ -1,0 +1,29 @@
+Name:            taskflow
+Namespace:       taskflow
+Status:          ◌ Progressing
+Message:         more replicas need to be updated
+Strategy:        Canary
+  Step:          1/6
+  SetWeight:     25
+  ActualWeight:  25
+Images:          ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0 (stable)
+                 ghcr.io/9m7fjfpv9k-cyber/taskflow:2.1.0 (canary)
+Replicas:
+  Desired:       4
+  Current:       4
+  Updated:       1
+  Ready:         4
+  Available:     4
+
+NAME                                                                 KIND         STATUS         AGE  INFO
+⟳ taskflow                                                           Rollout      ◌ Progressing  52m
+├──# revision:2
+│  ├──⧉ taskflow-df976ccb5                                           ReplicaSet   ✔ Healthy      28s  canary
+│  │  └──□ taskflow-df976ccb5-lfqtf                                  Pod          ✔ Running      28s  ready:1/1
+│  └──α taskflow-df976ccb5-2-1                                       AnalysisRun  ◌ Running      22s
+│     └──⊞ e5da4c39-404e-4857-8a10-c4b6e4ab0fca.test-de-charge-k6.1  Job          ◌ Running      22s
+└──# revision:1
+   └──⧉ taskflow-c6cf57bd6                                           ReplicaSet   ✔ Healthy      52m  stable
+      ├──□ taskflow-c6cf57bd6-cvqdp                                  Pod          ✔ Running      52m  ready:1/1
+      ├──□ taskflow-c6cf57bd6-hwqpf                                  Pod          ✔ Running      52m  ready:1/1
+      └──□ taskflow-c6cf57bd6-n8vbp                                  Pod          ✔ Running      52m  ready:1/1

@@ -1,0 +1,1 @@
+{'VERSION': '2.2.0', 'FAILURE_RATE': 0.0, 'LATENCY_MS': 0}
