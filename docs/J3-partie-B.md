@@ -1,7 +1,7 @@
 # J3 — Partie B : incident, abort automatique et version corrigée
 
 **Terminé le 8 octobre 2026 : TaskFlow 2.2.0 à 100 %, quatre pods prêts,
-Argo CD Synced / Healthy.** La partie C n’est pas réalisée.
+Argo CD Synced / Healthy.** La [partie C est documentée séparément](J3-partie-C.md).
 
 La partie B reprend la configuration de la partie A et la modification du scénario
 à **60 secondes** fusionnée dans la PR #20. Aucun abort ni aucune promotion manuelle
@@ -96,4 +96,4 @@ kubectl -n taskflow get analysisrun
 kubectl -n argocd get application taskflow
 ```
 
-La chaîne n’a pas été modifiée pour réaliser la PSSI ni les exercices de la partie C.
+La PSSI a ensuite été ajoutée dans la [partie C](J3-partie-C.md) ; les mesures ci-dessus restent celles de la partie B.
