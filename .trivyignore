@@ -1,0 +1,31 @@
+# Dérogation PSSI-R5 du 2026-10-08, échéance 2026-10-15.
+# Uniquement pour le lab local et le digest TaskFlow 2.2.0 documenté dans policies/exceptions.md.
+# Risque accepté temporairement, pas une correction ni une preuve de non-exploitabilité.
+# Validation par PR ; propriétaire : Tom PATELAS.
+
+# starlette 0.41.3 ; correction disponible : 0.49.1.
+CVE-2025-62727 exp:2026-10-15
+
+# starlette 0.41.3 ; correction disponible : 1.1.0.
+CVE-2026-48818 exp:2026-10-15
+
+# starlette 0.41.3 ; correction disponible : 1.3.1.
+CVE-2026-54283 exp:2026-10-15
+
+# urllib3 1.26.20 ; correction disponible : 2.6.0.
+CVE-2025-66418 exp:2026-10-15
+
+# urllib3 1.26.20 ; correction disponible : 2.6.0.
+CVE-2025-66471 exp:2026-10-15
+
+# urllib3 1.26.20 ; correction disponible : 2.6.3.
+CVE-2026-21441 exp:2026-10-15
+
+# urllib3 1.26.20 ; correction disponible : 2.7.0.
+CVE-2026-44431 exp:2026-10-15
+
+# urllib3 1.26.20 ; correction disponible : 2.8.0.
+CVE-2026-97687 exp:2026-10-15
+
+# urllib3 1.26.20 ; correction disponible : 2.8.0.
+CVE-2026-97689 exp:2026-10-15

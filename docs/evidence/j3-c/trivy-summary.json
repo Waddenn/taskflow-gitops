@@ -1,0 +1,9 @@
+[
+  {
+    "image": "ghcr.io/9m7fjfpv9k-cyber/taskflow:2.2.0",
+    "digest": "ghcr.io/9m7fjfpv9k-cyber/taskflow@sha256:007c6d93784684df01a816e63e49d1bd5aa47ff9857f7fb452660ab49455876e",
+    "raw_findings": 9,
+    "exception_file": "/reports/exceptions.ignore",
+    "exit_code": 0
+  }
+]
