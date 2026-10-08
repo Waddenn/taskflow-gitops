@@ -1,0 +1,5 @@
+analysistemplate.argoproj.io/robustesse-k6 created (server dry run)
+configmap/k6-robustesse created (server dry run)
+rollout.argoproj.io/taskflow configured (server dry run)
+service/taskflow-canary created (server dry run)
+service/taskflow configured (server dry run)

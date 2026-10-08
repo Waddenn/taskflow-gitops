@@ -1,0 +1,5 @@
+OK apps/taskflow: Rollout, ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0
+OK exemples/bluegreen: Rollout, ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0
+OK exemples/canary: Rollout, ghcr.io/9m7fjfpv9k-cyber/taskflow:1.0.0
+OK exemples/robustesse: Rollout, ghcr.io/9m7fjfpv9k-cyber/taskflow:2.0.0
+OK Application: main, prune, selfHeal
